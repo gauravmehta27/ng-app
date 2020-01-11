@@ -1,0 +1,90 @@
+
+
+<kendo-window [minWidth]="250" 
+[top]="0" [left]="330"  [width]="750">
+
+  <div style="background-color:white" data-target="#modal">
+    <div class="modal-header">
+         <button type="button" class="close dismiss" aria-label="Close" (click)="CloseButton()">
+            <i class="acn-cross"></i>
+        </button> 
+        <h1>
+            FEEDBACK
+        </h1>
+    </div> 
+    <div class="modal-body" style="margin-top: -20px;">
+        <div>
+            <span id="ErrorText"></span><br />
+            <h2 class="sub-title">Your every new feedback brings a added value to TransIT.</h2>
+            <div class="form-group feedback-face">
+                <input type="hidden" (ngModel)="feedbackValue" name="feedbackValue" value="">
+                <span class="d-block cust-label">How satisfied are you with our services?</span>
+                <ul class="list-inline mb-0" id="feedback-pop">
+
+                    <li class=" rating1">
+                        <a href="javascript:void(0)" data-value="1" title="Extremely Unsatisfied" (click)="setFeedback($event)" [ngClass]="{active: feedbackValue==1}">
+                            <span>Extremely Unsatisfied</span>
+                        </a>
+                    </li>
+                    <li class="rating2">
+                        <a href="javascript:void(0)" data-value="2" title="Unsatisfied" (click)="setFeedback($event)" [ngClass]="{active: feedbackValue==2}">
+                            <span>Unsatisfied</span>
+                        </a>
+                    </li>
+                    <li class="rating3">
+                        <a href="javascript:void(0)" data-value="3" title="Neutral" (click)="setFeedback($event)" [ngClass]="{active: feedbackValue==3}">
+                            <span>Neutral</span>
+                        </a>
+                    </li>
+                    <li class="rating4">
+                        <a href="javascript:void(0)" data-value="4" title="Satisfied" (click)="setFeedback($event)" [ngClass]="{active: feedbackValue==4}">
+                            <span>Satisfied</span>
+                        </a>
+                    </li>
+                    <li class="rating5">
+                        <a href="javascript:void(0)" data-value="5" title="Extremely Satisfied" (click)="setFeedback($event)" [ngClass]="{active: feedbackValue==5}">
+                            <span>Extremely Satisfied</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <label class="d-block cust-label">What do you like most?</label>
+                <fieldset class="feedback-option-list">
+                    <div class="feedback-option" *ngFor="let option of feedBacks">
+                        <input class="option-checkbox" (ngModel)="option.like" (change)="getLikesList(option.value)" id="likeOption{{option.value}}"
+                               type="checkbox" value="{{option.value}}" ng-disabled="isLikeDisabled(option.value)">
+                        <label for="likeOption{{option.value}}">{{option.name}}</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label class="d-block cust-label">What would you like to see improvements on?</label>
+                <fieldset class="feedback-option-list">
+                    <div class="feedback-option" *ngFor="let option of feedBacks">
+                        <input class="option-checkbox" (ngModel)="option.hate" (change)="getHatesList(option.value)" id="hateOption{{option.value}}"
+                               type="checkbox" value="{{option.value}}" ng-disabled="isHateDisabled(option.value)">
+                        <label for="hateOption{{option.value}}">{{option.name}}</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="feedbacktext" class="d-block cust-label">
+                    Feedback
+                    <span class="error" ng-show="feedbackValue<=3 && feedbackValue!=''">(Required)</span>
+                </label>
+                <textarea class="form-control" id="feedbacktext" ng-model="feedBackText" rows="3" maxlength="2000"></textarea>
+                <span class="error" ng-show="feedbackValue<=3 && isValidText">* Please enter description</span>
+                Kindly provide your thoughts / Ideas that would enable improvements to the Application!
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary dismiss" (click)="Submit()">SUBMIT</button>
+    </div>
+</div>
+</kendo-window>
+
+

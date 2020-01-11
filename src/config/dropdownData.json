@@ -1,0 +1,36 @@
+{
+  "DEALTYPEOptions": [
+    "Transition",
+    "Transformation",
+    "Transition and Transformation",
+    "Transition and Transformation with SI project combined",
+    "Value Based Deal (Excluding Procurement)",
+    "As A Servcie",
+    "Procurement",
+    "RPA"
+  ],
+  "BCPTypeOptions": ["Standard", "Client Driven", "Non Standard"],
+  "BCPLevelOptions": ["Level1", "Level2", "Level3", "Level4"],
+  "DEALSTATUSOptions": [
+    "Active - In Progress",
+    "Active - On Hold",
+    "In - Active / Closed"
+  ],
+  "yesnoOptions": [
+    { "text": "Yes", "value": "Y" },
+    { "text": "No", "value": "N" }
+  ],
+
+
+  "HMLOptions": [{ "text": "High", "value": "High" },
+    { "text": "Medium", "value": "Medium" } , { "text": "Low", "value": "Low" } ],
+
+  "DealInfo": {
+    "DEALTYPE": "Transformation",
+    "MMSID": "24",
+    "DEALNM": "Google",
+    "DEALSTATUS": "Active - On Hold",
+    "THIRDPARTYDEPENDENCY": "Yes",
+    "ClientDataProtnRiskScore": "High"
+  }
+}

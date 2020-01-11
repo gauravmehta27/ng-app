@@ -1,0 +1,64 @@
+/*!
+/*!
+ * Material Design for Bootstrap 4
+ * Version: MDB FREE 4.0.0 
+ *
+ *
+ * Copyright: Material Design for Bootstrap
+ * http://mdbootstrap.com/
+ *
+ * Read the license: http://mdbootstrap.com/license/
+ *
+ *
+ * Documentation: http://mdbootstrap.com/
+ *
+ * Getting started: http://mdbootstrap.com/getting-started/
+ *
+ * Tutorials: http://mdbootstrap.com/bootstrap-tutorial/
+ *
+ * Templates: http://mdbootstrap.com/templates/
+ *
+ * Support: http://mdbootstrap.com/forums/forum/support/
+ *
+ * Contact: office@mdbootstrap.com
+ *
+ * Atribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js , Hammer.js
+ *
+ */
+  
+@charset "UTF-8";  
+
+// MDB Framework //
+
+// Mixins
+@import "material/prefixer";
+@import "material/mixins";
+
+// Variables
+@import "material/colors"; 
+@import "material/variables-b4";
+@import "material/variables";  
+
+//Global
+@import "material/global"; 
+  
+// Material
+@import "material/roboto"; 
+@import "material/typography";
+@import "material/animations";
+@import "material/waves";
+@import "material/helpers";
+@import "material/buttons";  
+//@import "material/forms-basic";
+@import "material/cards-basic";  
+@import "material/navbars";  
+@import "material/hover-effects";  
+@import "material/footer";  
+@import "material/carousels-basic"; 
+   
+ 
+
+
+
+
+ 

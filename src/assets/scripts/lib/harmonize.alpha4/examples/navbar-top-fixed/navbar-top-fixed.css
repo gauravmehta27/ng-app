@@ -1,0 +1,6 @@
+body {
+  /* Show it's not fixed to the top */
+  position: relative;
+  min-height: 75rem;
+  padding-top: 6rem;
+}

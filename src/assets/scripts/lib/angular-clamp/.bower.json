@@ -1,0 +1,14 @@
+{
+  "name": "angular-clamp",
+  "homepage": "https://github.com/Coffa/angular-clamp",
+  "_release": "8ade987",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8ade987793ecb7833cafe5af2cb9ba10417a1bee"
+  },
+  "_source": "https://github.com/Coffa/angular-clamp.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Coffa/angular-clamp.git",
+  "_direct": true
+}

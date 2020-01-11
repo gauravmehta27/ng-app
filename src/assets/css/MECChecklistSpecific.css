@@ -1,0 +1,219 @@
+﻿  /*.k-dropdown-wrap.k-state-default .k-select .k-icon.k-i-arrow-s {
+        background: url("/../../Content/Images/asc.gif") no-repeat 0px 8px;
+    }*/
+
+    .checklist-summary {
+        padding-top: 10px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    .k-grid .k-edit-cell .k-dropdown-wrap.k-state-default, .k-grid .k-edit-cell .k-widget, .k-grid .k-edit-cell .k-state-focused {
+        background: transparent;
+        border: 1px solid #ddd;
+        outline: none;
+        box-shadow: none;
+    }
+
+    /*inline styling for progress bar*/
+    .k-progress-status {
+        display: inline-block;
+        padding: 0 1.2em;
+    }
+    /*style for removing  dirty cell indictor*/
+    .k-dirty {
+        border-style: none;
+    }
+
+    .checklist-summary .rating {
+        border-left: none;
+    }
+    /* basic positioning */
+    .legend {
+        list-style: none;
+    }
+
+        .legend li {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .legend span {
+            border: 1px solid #ccc;
+            float: left;
+            width: 12px;
+            height: 12px;
+            margin: 2px;
+        }
+        /* your colors */
+        .legend .Incomplete {
+            background-color: #ff0000;
+        }
+
+        .legend .Complete {
+            background-color: #66A944;
+        }
+        .legend .NA {
+            background-color: #c5c5c5;
+        }
+    .k-widget.k-panelbar .checkbox-active .get-approved {
+        display: block;
+    }
+
+    .k-widget.k-panelbar .checkbox-active.approved .css-checkLabel, .k-widget.k-panelbar .checkbox-active.approved label, .k-widget.k-panelbar .checkbox-active.approved .get-approved {
+        display: block;
+    }
+
+    .grid-comments.popover {
+        background: #F9F8F7;
+        max-width: 500px;
+    }
+
+        .grid-comments.popover .popover-content {
+            padding: 10px;
+        }
+
+    .k-grid-content {
+
+        max-height: 400px;
+
+    }
+    .grid-comments.popover .popover-content .comments {
+        background: white;
+        border-radius: 3px;
+        width: 470px;
+        margin-bottom: 10px;
+        border: 1px solid #fff;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #333;
+        max-height: 220px;
+        overflow-y: auto;
+        z-index: 5;
+    }
+
+        .grid-comments.popover .popover-content .comments .comment-item {
+            padding: 10px 0;
+        }
+
+            .grid-comments.popover .popover-content .comments .comment-item span {
+                color: #800040;
+            }
+
+    .grid-comments.popover .popover-content textarea {
+        width: 470px;
+        border: 1px solid #e5e5e5;
+        background: white;
+        height:100px;
+    }
+
+    .grid-comments.popover .popover-content > .arrow:after {
+        border-left-color: #F9F8F7;
+    }
+
+    .k-widget.k-panelbar .k-state-active .k-state-selected {
+        border-bottom: 0;
+    }
+
+    .k-widget.k-panelbar .k-item .k-state-selected {
+        border-bottom: 1px solid #c5c5c5;
+    }
+     #myModalFooterDisplayRaci.modal {
+        top: 0 !important ;
+    }
+
+        #myModalFooterDisplayRaci.modal .modal-content {
+            padding: 0 0 50px !important;
+        }
+
+            #myModalFooterDisplayRaci.modal .modal-content .modal-header {
+                padding: 25px 50px !important;
+                border-bottom: 1px solid #ccc !important;
+            }
+
+        #myModalFooterDisplayRaci.modal .modal-content {
+            padding: 0 0 50px !important;
+        }
+
+            #myModalFooterDisplayRaci.modal .modal-content .modal-body {
+                padding: 10px 50px !important;
+            }
+
+    #myModalFooter.modal .modal-content .modal-header .title {
+        padding-bottom: 0 !important;
+    }
+     .grid-comments.fade {
+        z-index: -1;
+    }
+
+        .grid-comments.fade.in {
+            z-index: 99999;
+        }
+
+    .tick-rejected.acn-cross.a.elementstyle {
+        color: red;
+    }
+
+    .acn-cross.a {
+        background: #FF3333;
+        border-radius: 50%;
+        margin-right: 5px;
+        display: inline-block;
+        padding: 0 4px;
+        line-height: 16px;
+    }
+
+    .acn-cross.a {
+        font-size: 8px;
+        color: #fff;
+    }
+
+    .acn-circle-left-right-o {
+        background: #F58423 !important;
+        border-radius: 50% !important;
+        margin-right: 5px !important;
+        display: inline-block !important;
+        padding: 0 4px !important;
+        line-height: 16px !important;
+        font-size: 8px !important;
+        color: #fff !important;
+    }
+
+    .k-widget, .k-widget * {
+        box-sizing: inherit;
+        webkit-box-sizing: inherit;
+    }
+
+    .comment-icon span {
+        color: #0D94D2;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 12px;
+    }
+
+    .quick-link:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    #RACIGrid .k-grid-content {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+ #RACIGrid .k-grid-header{
+        padding-right:17px !important;
+
+    }
+  .linkIcon {
+            display: block;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: url(../../Content/img/link-mec.png);
+            width: 22px;
+            height: 22px;
+            padding-left: 22px;
+            cursor: pointer;
+        }

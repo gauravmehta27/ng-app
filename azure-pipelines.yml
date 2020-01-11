@@ -1,0 +1,249 @@
+trigger: none
+resources:
+- repo: self
+  clean: true
+  
+queue:
+  name: Hosted VS2017
+  demands: 
+  - npm
+  - node.js
+  - DotNetFramework
+
+branches:
+    exclude:
+    - tags/*
+    - refs/heads/master
+    - refs/tags/*
+
+stages:
+- stage: code_quality
+  displayName: Code Quality Checks
+  jobs: 
+  - job: unit_test
+    displayName: Lint and Unit Test
+    pool:
+      vmImage: 'ubuntu-16.04'  
+    steps:
+      - bash: |
+          #!/bin/bash
+          NODE_ENV=UNIT node ./cicd/remove-test-packages.js
+        displayName: 'Remove unused dependancies'
+
+      - task: Npm@1
+        displayName: 'Npm Install'
+        inputs:
+          verbose: false
+        enabled: true  
+
+      - task: Npm@1
+        displayName: 'npm Lint'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run lint'
+        enabled: false
+
+      - task: Npm@1
+        displayName: 'Npm code-scan'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run code-scan'
+        enabled: true
+
+      - task: Npm@1
+        displayName: 'Npm test'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run test'
+        enabled: true
+
+
+      - task: Npm@1
+        displayName: 'E2E tests'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run e2e'
+        enabled: true
+
+      - task: PublishTestResults@2
+        displayName: 'Publish Test Results'
+        inputs:
+          testResultsFiles: |
+            reports/*
+            coverage/junit/*.xml
+        condition: succeededOrFailed()
+      - task: PublishCodeCoverageResults@1
+        displayName: 'Publish Code Coverage'
+        inputs:
+          codeCoverageTool: Cobertura
+          summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+          reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
+        condition: succeededOrFailed()
+  dependsOn: []
+  condition: and(succeeded(), ne(variables['Build.SourceBranch'], 'refs/heads/master'))
+- stage: functional_validation
+  displayName: Functional Quality Checks
+  dependsOn: []
+  jobs: 
+  - job: functional_checks
+    displayName: Lighthouse checks
+    steps: 
+      - bash: |
+            #!/bin/bash
+            NODE_ENV=LIGHTHOUSE node ./cicd/remove-test-packages.js
+        displayName: 'Remove unused dependancies'
+      - task: Npm@1
+        displayName: 'npm install'
+        inputs:
+          command: custom
+
+          customCommand: 'ci --no-save '
+      - task: Npm@1
+        displayName: npm build cicd
+        enabled: true
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run build'
+      - task: DockerCompose@0
+        displayName: 'build docker image'
+        enabled: true
+        inputs:
+          dockerComposeFile: 'cicd/docker-compose.yml'
+          dockerComposeCommand: build
+          dockerComposeFileArgs: |
+            DIST_FOLDER=$(System.DefaultWorkingDirectory)/dist
+            HTTP_PORT=8080
+            APP_FOLDER=$(System.DefaultWorkingDirectory)
+      - task: DockerCompose@0
+        displayName: 'run webapp'
+        inputs:
+            dockerComposeFile: 'cicd/docker-compose.yml'
+            dockerComposeFileArgs: |
+              DIST_FOLDER=$(System.DefaultWorkingDirectory)/dist
+              HTTP_PORT=8080
+              APP_FOLDER=$(System.DefaultWorkingDirectory)
+            dockerComposeCommand: 'up -d'
+        enabled: true
+      - bash: |
+            mkdir -p reports
+            HTTP_PORT=8080
+              # ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' webapp)
+            node node_modules/lighthouse/lighthouse-cli/index.js  --output-path=./reports/lighthouse-report.html --quiet  --chrome-flags='--headless' http://localhost:$HTTP_PORT
+        displayName: 'npm run Lighthouse'
+        enabled: true
+      - task: Npm@1
+        displayName: 'Bundle analyzier'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run bundle-report'
+        enabled: true
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish reports'
+        enabled: true
+        inputs:
+          PathtoPublish: 'reports'
+          ArtifactName: 'reports'
+        continueOnError: true
+        condition: succeededOrFailed()
+    pool:
+      vmImage: 'ubuntu-16.04'
+
+- stage: package_artifacts
+  displayName: Package Builds
+  jobs:
+  - job: package
+    displayName: Package
+    pool:
+      vmImage: 'ubuntu-16.04'   
+    steps:
+       - bash: |
+           #!/bin/bash
+           NODE_ENV=production node ./cicd/remove-test-packages.js
+         displayName: 'Remove unused dependancies'
+      - task: Npm@1
+        displayName: 'npm install'
+        inputs:
+          command: custom
+
+          customCommand: 'ci --no-save '
+
+- task: CIODevOps.http-security-headers-build-release-task.custom-build-release-task.CheckHTTPSecurityHeader@1
+  displayName: 'CheckHTTPSecurityHeader'    
+  enabled: false  
+
+- task: CIODevOps.asapsecurityscan-build-release-task.custom-build-release-task.ASAPSecurityScanTask@0
+  displayName: ASAPSecurityScanTask
+  inputs:
+    project_id: '<ASAP Project ID>'
+  enabled: false
+  - task: octopusdeploy.octopus-deploy-build-release-tasks.octopus-pack.OctopusPack@3
+  
+  displayName: 'Create Package for Octopus'
+  inputs:
+    PackageId: '<%= AzureDevOpsProjectName%>'
+    PackageFormat: Zip
+    PackageVersion: '1.0.$(Build.BuildNumber)'
+    SourcePath: 'dist'
+    OutputPath: '$(Build.ArtifactStagingDirectory)\drop'
+  enabled: true
+ 
+- task: octopusdeploy.octopus-deploy-build-release-tasks.octopus-push.OctopusPush@3
+  displayName: 'Push Packages to Octopus'
+  inputs:
+    OctoConnectedServiceName: '<%= AzureDevOpsServiceConnectionName%>'
+    Package: '$(Build.ArtifactStagingDirectory)\drop\<%= AzureDevOpsProjectName%>.1.0.$(Build.BuildNumber).zip'
+    Replace: true
+  enabled: true
+
+- task: octopusdeploy.octopus-deploy-build-release-tasks.octopus-create-release.OctopusCreateRelease@2
+  displayName: 'Create Octopus Release'
+  inputs:
+    OctoConnectedServiceName: '<%= AzureDevOpsServiceConnectionName%>'
+    ProjectName: '<%= OctopusProjectName%>'
+    ReleaseNumber: '1.0.0-$(Build.BuildNumber)'
+  enabled: true
+ 
+- task: octopusdeploy.octopus-deploy-build-release-tasks.octopus-deploy.OctopusDeployRelease@2
+  displayName: 'Deploy Octopus Release'
+  inputs:
+    OctoConnectedServiceName: '<%= AzureDevOpsServiceConnectionName%>'
+    Project: '<%= OctopusProjectName%>'
+    ReleaseNumber: '1.0.0-$(Build.BuildNumber)'
+    Environments: '<%= OctopusEnvironment%>'
+  enabled: true
+  
+      - task: Npm@1
+        displayName: 'Npm build'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run build:ci'
+        enabled: true
+
+      - task: CopyFiles@2
+        displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+        inputs:
+          SourceFolder: 'dist'
+          Contents: '**'
+          TargetFolder: '$(build.artifactstagingdirectory)'
+          CleanTargetFolder: true
+          OverWrite: true
+        enabled: true
+
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact:drop'
+        inputs:
+          PathtoPublish: '$(build.artifactstagingdirectory)'
+          ArtifactName: drop
+          ArtifactType: Container
+        enabled: true
+
+     
+  dependsOn: []
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['System.PullRequest.SourceBranch'], 'refs/heads/hotfix'), eq(variables['Build.Reason'], 'Manual')))

@@ -1,0 +1,19 @@
+
+    .k-autocomplete .k-input, .k-dropdown-wrap .k-input, .k-picker-wrap .k-input {
+        height: auto;
+        line-height: 5px !important;
+        padding: 10px 10px;
+    }
+
+    .k-dropdown-wrap.k-state-default {
+        background-color: white;
+        border-color: #ccc;
+        min-height: 25px;
+    }
+
+    span.css-checkLabel {
+        z-index: -1;
+    }
+    /*.modal-backdrop {
+        z-index: 1048;
+    }*/

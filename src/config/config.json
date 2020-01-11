@@ -1,0 +1,18 @@
+{
+  "msal": {
+    "authority": "https://login.microsoftonline.com/{tenantid}",
+    "clientID": "your app clientid",
+    "redirectUri": "your app url",
+    "protectedResourceMap": [
+      [
+        "https://youapiservice.accenture.com",
+        [
+          "https://youapiservice.accenture.com//service scope"
+        ]
+      ]
+    ]
+    
+  },
+  "sampleDataUrl": "../data/data.json",
+  "sampleDataUrl2": "../data/data2.json"
+}

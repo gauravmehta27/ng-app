@@ -1,0 +1,31 @@
+.navbar {
+    padding:0;
+    .container-fluid {padding:0}
+    .navbar-brand {padding:0.5rem 1rem;}
+    .nav-item {
+        padding:0.5rem 1.5rem;
+        margin:0;
+        &  + .nav-item {margin:0;}
+        //:hover {opacity:0.9;}
+        }
+}
+
+//fk - this is to make top navbar moveable on click for collapse
+.navbar-collapse.collapse.in {
+    //background-color:#fff;
+    //position:fixed;
+    //top:0;
+    //z-index: 1029;
+    & + .navbar.navbar-fixed-top {
+        //top:$navbar-open-height;
+        position:relative;
+        //@include quickTimeTravel(500ms, top);
+         
+        }
+}
+
+//fk - adding a padding top to the body for fixed navbar
+// temporary
+body {
+    padding-top:2rem; 
+}

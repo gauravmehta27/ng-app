@@ -1,0 +1,818 @@
+<div class="deal-information-wrapper">
+  <div style="color:red">
+    <!-- @Html.ValidationMessageFor(model => model.DealInformation.GOVERNANCENOTESDESC)
+        @Html.ValidationMessageFor(model => model.DealInformation.TRANSITIONENDDT) -->
+  </div>
+  <form [formGroup]="form">
+      <div class="form-group deal-setup">
+          <label for="MMSID">
+            MMS ID
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="MMSID"
+            readonly="true"
+          />
+          <!-- @Html.TextBoxFor(model => model.DealInformation.MMSID, new { @class =
+          "form-control", @readonly = "readonly" }) -->
+        </div>
+        <kendo-dropdownlist
+      style="width:340px; border: 1px solid #ccc;"
+      [data]="DEALTYPEOptions"
+      formControlName="DEALTYPE"
+    ></kendo-dropdownlist>
+    </form>
+  <div class="form-group deal-setup">
+    <label for="DEALNM">Name of Deal</label>
+    <!-- @Html.TextBoxFor(model => model.DealDetail.DEALNM, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="DealDetail.DEALNM"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label for="CLIENTNM">Client Name</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.CLIENTNM, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="DealInformation.CLIENTNM"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label for="SGNM">Service Group</label>
+    <!-- @Html.TextBoxFor(model => model.MMSDetails.SGNM, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="MMSDetails.SGNM"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label for="DEALSTAGE">Deal Stage</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.DEALSTAGE, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="DealInformation.DEALSTAGE"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label for="Offering">Offerings</label>
+    <!-- @Html.TextAreaFor(model => model.DealInformation.Offering, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="textArea"
+      class="form-control"
+      [(ngModel)]="DealInformation.Offering"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label for="DEALTYPE">Deal Type</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealInformation.DEALTYPE) -->
+    <!-- <select
+      style="width:340px"
+      id="DEALTYPE_"
+      kendo-drop-down-list
+      k-data-source="arr"
+      k-[(ngModel)]="'arr'"
+      k-change="DEALTYPE_onchange"
+      required
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:340px; border: 1px solid #ccc;"
+      [data]="DEALTYPEOptions"
+      [(ngModel)]="DealInformation.DEALTYPE"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label for="OperatingGroup">Operating Group</label>
+    <!-- @Html.TextBoxFor(model => model.OpportunityInformation.OperatingGroup, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="OpportunityInformation.OperatingGroup"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label for="GEOREGIONNM">GEO Region</label>
+    <!-- @Html.TextBoxFor(model => model.OpportunityInformation.GEOREGIONNM, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="OpportunityInformation.GEOREGIONNM"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label for="GEOUNITNM">GEO Unit</label>
+    <!-- @Html.TextBoxFor(model => model.OpportunityInformation.GEOUNITNM, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="OpportunityInformation.GEOUNITNM"
+      readonly="true"
+    />
+  </div>
+  <!-- @if (Model.OpportunityInformation != null && Model.OpportunityInformation.SGNM != "IO" && Model.OpportunityInformation.SGNM != "ICI")
+  {@* -->
+
+  <div class="form-group deal-setup" *ngIf= "(OpportunityInformation != null && OpportunityInformation.SGNM != 'IO' && OpportunityInformation.SGNM != 'ICI') ; else otherBlock">
+     <div class="form-group deal-setup">
+    <label for="contractTCV">
+      Contracted TCV USD'000
+      <i class="mandatory">*</i>
+    </label>
+    <div kendo-tooltip options="tooltipOptions">
+      <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="DealDetail.ContractedTCV"
+      style="height: 25px; width: 100%"
+    />
+    </div>
+    </div>
+  </div>
+ <ng-template #otherBlock>
+  <div class="form-group deal-setup">
+    <label>Contracted TCV USD'000 </label>
+     <!-- @Html.TextBoxFor(model => model.DealDetail.ContractedTCV, new { @class = "form-control" ,
+         @disabled = "disabled", @onchange = "ContractedTCV();" })  -->
+         <input
+         type="text"
+         class="form-control"
+         id="ContractedTCV"
+         [(ngModel)]="DealDetail.ContractedTCV"
+         readonly="true"
+         disabled="true"
+        />
+        </div>
+      </ng-template>
+
+  <div class="form-group deal-setup">
+    <label>Total IO Value (In '000s)($)</label>
+    <!-- @Html.TextBoxFor(model => model.DealDetail.TOTALIOVALUEAMT, new { @class = "form-control", @onchange = "TOTALIOVALUEAMT_Change();", @maxlength = "10", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      maxlength="10"
+      [(ngModel)]="DealDetail.TOTALIOVALUEAMT"
+      readonly="true"
+      />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Reporting Status</label>
+    <!-- @Html.TextBoxFor(model => model.MMSDetails.REPORTINGSTATUS, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="MMSDetails.REPORTINGSTATUS"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Prime Delivery Location</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.PrimaryDLLoc, new { @class = "form-control", @readonly = "readonly", @title = "Location with maximum Base FTEs." }) -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="DealInformation.PrimaryDLLoc"
+      readonly="true"
+      title="Location with maximum Base FTEs."
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Transition Start Date</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealDetail.TRANSITIONSTARTDT)-->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="DealDetail.TRANSITIONSTARTDT"
+      readonly="true"
+    />
+    
+    <div *ngIf ="(DealDetail.WaveConfigured == false); else TransDateBlock">
+    <!-- <kendo-date-picker
+      style="width:100%"
+      [(ngModel)]="DealDetail.TRANSITIONSTARTDT"
+      /> -->
+    <!-- k-change="transstartdate_onChange" -->
+  </div>
+    <ng-template #TransDateBlock>
+        <!-- @Html.TextBoxFor(model => model.DealDetail.TRANSITIONSTARTDT, new
+                    {
+                        @class = "form-control",
+                        @Value = (Model.DealDetail.TRANSITIONSTARTDT == null ? "" : Model.DealDetail.TRANSITIONSTARTDT.Value.ToShortDateString()),
+                        @readonly = "readonly"
+                    }) -->
+        <input type="text" [(ngModel)]="DealDetail.TRANSITIONSTARTDT" readonly="true" />
+     </ng-template>
+  </div>
+  <div class="form-group deal-setup">
+    <label>Transition End Date</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.TRANSITIONENDDT, new
+                    {
+                        @class = "form-control",
+                        @Value = (Model.DealInformation.TRANSITIONENDDT == null ? "" : Model.DealInformation.TRANSITIONENDDT.Value.ToShortDateString()),
+                        @readonly = "readonly"
+                    }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="TRANSITIONENDDT"
+      [(ngModel)]="DealInformation.TRANSITIONENDDT"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Contract FTEs</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.ContractFTE, new { @class = "form-control", @readonly = "readonly", @title = "Cumulative of BPS/IO Onshore/Offshore FTE." }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="ContractFTE"
+      [(ngModel)]="DealInformation.ContractFTE"
+      readonly="true"
+      title="Cumulative of BPS/IO Onshore/Offshore FTE."
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>BPO Base FTE</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.TotalBPOFTE, new { @class = "form-control", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="TotalBPOFTE"
+      [(ngModel)]="DealInformation.TotalBPOFTE"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>IO Base FTE</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.TotalIOFTE, new { @class = "form-control", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="TotalIOFTE"
+      [(ngModel)]="DealInformation.TotalIOFTE"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Total Deal FTE</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.TotalDealFTE, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="TotalDealFTE"
+      [(ngModel)]="DealInformation.TotalDealFTE"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>LOI Signed Date</label>
+    <!-- @Html.HiddenFor(model => model.DealDetail.LOI) -->
+    <!-- <kendo-date-picker
+      style="width:100%"
+      [(ngModel)]="'DealDetail.LOI'"
+      /> -->
+    <!-- k-change="LOI_onChange" -->
+  </div>
+  <div class="form-group deal-setup">
+    <label>Deal Status</label>
+    <!-- @Html.HiddenFor(model => model.DealInformation.DEALSTATUS) -->
+    <!-- <select
+      id="DEALSTATUS_"
+      kendo-drop-down-list
+      k-data-source="DEALSTATUSOptions"
+      style="width:100%"
+      k-[(ngModel)]="'@Model.DealInformation.DEALSTATUS'"
+      k-change="DEALSTATUS_onchange"
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="DEALSTATUSOptions"
+      [(ngModel)]="DealInformation.DEALSTATUS"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>Transition WBSe#</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.TransitionWBSe, new { @class = "form-control", @maxlength = "100", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="TransitionWBSe"
+      [(ngModel)]="DealInformation.TransitionWBSe"
+      maxlength="100"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Third Party Vendors in scope</label>
+    <!-- @Html.TextBoxFor(model => model.ThirdPartyInvolvement.ThirdPartyVendorsInScopeInd, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="ThirdPartyInvolvement"
+      [(ngModel)]="ThirdPartyInvolvement.ThirdPartyInvolvement"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>3rd Party Dependency?</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealDetail.THIRDPARTYDEPENDENCY) -->
+    <!-- <select
+      id="THIRDPARTYDEPENDENCY_"
+      kendo-drop-down-list
+      k-data-source="yesnoOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      style="width:100%"
+      k-[(ngModel)]="'@Model.DealDetail.THIRDPARTYDEPENDENCY'"
+      k-change="THIRDPARTYDEPENDENCY_onchange"
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="yesnoOptions"
+      [(ngModel)]="DealDetail.THIRDPARTYDEPENDENCY"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>BCP Type</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealInformation.BCPType) -->
+    <kendo-dropdownlist
+      style="width:340px; border: 1px solid #ccc;"
+      [data]="BCPTypeOptions"
+      [(ngModel)]="DealInformation.BCPType"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>BCP Level</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealInformation.BCPLevel) -->
+    <!-- <select
+      id="BCPLevel_"
+      kendo-drop-down-list
+      k-data-source="BCPLevelOptions"
+      k-[(ngModel)]="'@Model.DealInformation.BCPLevel'"
+      k-change="DEALSTATUS_onchange"
+      required
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:340px; border: 1px solid #ccc;"
+      [data]="BCPLevelOptions"
+      [(ngModel)]="DealInformation.BCPLevel"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>Client Data Protection Risk Score</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealInformation.ClientDataProtnRiskScore) -->
+    <!-- <select
+      id="ClientDataProtnRiskScore_"
+      kendo-drop-down-list
+      k-data-source="HMLOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      k-[(ngModel)]="'@Model.DealInformation.ClientDataProtnRiskScore'"
+      k-change="HREInd_onchange"
+      required
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:340px; border: 1px solid #ccc;"
+      [data]="HMLOptions"
+      [(ngModel)]="DealInformation.ClientDataProtnRiskScore"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>CDP Risk Assessment Approved</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealInformation.CDPRiskAssessApproved) -->
+    <!-- <select
+      id="CDPRiskAssessApproved_"
+      kendo-drop-down-list
+      k-data-source="yesnoOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      k-[(ngModel)]="'@Model.DealInformation.CDPRiskAssessApproved'"
+      k-change="HREInd_onchange"
+      required
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="yesnoOptions"
+      [(ngModel)]="DealInformation.CDPRiskAssessApproved"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>Approved by</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.ApprovedBy, new { @class = "form-control", @maxlength = "250", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="ApprovedBy"
+      [(ngModel)]="DealInformation.ApprovedBy"
+      maxlength="250"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Implementation of CDP Controls Planned</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealInformation.IMPControlsPlanned) -->
+    <!-- <select
+      id="CDPControlsPlanned_"
+      kendo-drop-down-list
+      k-data-source="yesnoOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      k-[(ngModel)]="'@Model.DealInformation.IMPControlsPlanned'"
+      k-change="HREInd_onchange"
+      required
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="yesnoOptions"
+      [(ngModel)]="DealInformation.IMPControlsPlanned"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <!-- COMMENTED BECAUSE dIV WOULD BE DISPLYED ON SOME CONDITION -->
+  <!-- <div class="form-group deal-setup">
+    <label>Implementation of Project/Client Controls</label>
+    <i class="mandatory">*</i>
+     @Html.HiddenFor(model => model.DealInformation.IMPClientProjectControls) 
+    <select
+      id="ProjectClientControls_"
+      kendo-drop-down-list
+      k-data-source="yesnoOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      k-[(ngModel)]="'@Model.DealInformation.IMPClientProjectControls'"
+      k-change="HREInd_onchange"
+      required
+    ></select>
+  </div> -->
+
+  <div class="form-group deal-setup">
+    <label>Deal complexity</label>
+    <!-- @Html.HiddenFor(model => model.DealInformation.DealComplexity)
+    @{ -->
+    <!-- <select
+      id="DealComplexity_"
+      kendo-drop-down-list
+      k-data-source='["High","Medium","Low"]'
+      k-[(ngModel)]="'@Model.DealInformation.DealComplexity'"
+      required
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="HMLOptions"
+      [(ngModel)]="DealInformation.DealComplexity"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+    <!-- } -->
+  </div>
+  <div class="form-group deal-setup">
+    <label>Pricing Structure</label>
+    <!-- @Html.TextBoxFor(model => model.OpportunityInformation.PRICINGSTRUCTURE, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="PRICINGSTRUCTURE"
+      [(ngModel)]="OpportunityInformation.PRICINGSTRUCTURE"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Transition Type</label>
+    <!-- @Html.HiddenFor(model => model.DealInformation.DEALSOURCE)
+    @{
+        if (!Model.DealInformation.IsSubwaveConfigured)
+        {
+            <select id="DEALSOURCE_" kendo-drop-down-list k-data-source='DEALSOURCEOptions' k-[(ngModel)]="'@Model.DealInformation.DEALSOURCE'" k-change="DEALSOURCE_onchange"></select>
+        }
+        else
+        {-->
+    <input
+      type="text"
+      class="form-control"
+      id="DEALSOURCE"
+      [(ngModel)]="DealInformation.DEALSOURCE"
+      readonly="true"
+      title="Transition Type is already set at wave level therefore updates cannot be made at Deal Information setup."
+    />
+    <!-- @Html.TextBoxFor(model => model.DealInformation.DEALSOURCE, new { @class = "form-control", @readonly = "readonly", @onchange = "DEALSOURCE_onchange();", @title = "Transition Type is already set at wave level therefore updates cannot be made at Deal Information setup." })
+        }
+    }  -->
+  </div>
+  <div class="form-group deal-setup">
+    <label>HRE (High Risk Engagement) Deal</label>
+    <!-- @Html.HiddenFor(model => model.DealDetail.HREInd) -->
+    <!-- <select
+      id="HREInd_"
+      kendo-drop-down-list
+      k-data-source="hrdDrop"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      k-[(ngModel)]="'@Model.DealDetail.HREInd'"
+      k-change="HREInd_onchange"
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="yesnoOptions"
+      [(ngModel)]="DealDetail.HREInd"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>Is handover given to Mob Execution</label>
+    <!-- @Html.HiddenFor(model => model.DealDetail.HANDOVERSTATUS) -->
+    <!-- <select
+      id="HANDOVERSTATUS_"
+      kendo-drop-down-list
+      k-data-source="yesnoOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      k-[(ngModel)]="'@Model.DealDetail.HANDOVERSTATUS'"
+      k-change="HANDOVERSTATUS_onchange"
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="yesnoOptions"
+      [(ngModel)]="DealDetail.HANDOVERSTATUS"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>Project SharePoint Link</label>
+    <!-- @Html.TextBoxFor(model => model.DealDetail.SharePointUrl, new { @class = "form-control", @onchange = "SharePointUrl_Change();", @maxlength = "500", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="SharePointUrl"
+      [(ngModel)]="DealDetail.SharePointUrl"
+      readonly="true"
+      maxlength="500"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Project Circles Link</label>
+    <!-- @Html.TextBoxFor(model => model.DealDetail.CircleUrl, new { @class = "form-control", @onchange = "CircleUrl_Change();", @maxlength = "500", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="CircleUrl"
+      [(ngModel)]="DealDetail.CircleUrl"
+      readonly="true"
+      maxlength="500"
+    />
+  </div>
+  <!-- //Commented because this would be displayed on some condition 
+    <div class="form-group deal-setup">
+    <label>Client Account Lead</label>
+    CR:58945- Rename Client Account Lead to Delivery Account Lead and Prime
+    Delivery Lead to Prime MD in the impacted modules
+    <label>Delivery Account Lead</label>
+    <i class="mandatory">*</i>
+     @Html.TextBoxFor(model => model.DealInformation.ClientAccountLead, new { @class = "form-control", @maxlength = "250", dirtyonchange = "", }) 
+  </div>
+  <div class="form-group deal-setup">
+    <label>Prime Delivery Lead</label>
+    CR:58945- Rename Client Account Lead to Delivery Account Lead and Prime
+    Delivery Lead to Prime MD in the impacted modules
+    <label>Prime MD</label>
+    <i class="mandatory">*</i>
+     @Html.TextBoxFor(model => model.DealInformation.PrimaryDL, new { @class = "form-control", @maxlength = "250", dirtyonchange = "" }) 
+  </div>-->
+  <div class="form-group deal-setup">
+    <label>Service Delivery Lead</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.SDOLead, new { @class = "form-control", @maxlength = "250", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="SDOLead"
+      [(ngModel)]="DealInformation.SDOLead"
+      readonly="true"
+      maxlength="250"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Master Contract Number</label>
+    <!-- @Html.TextBoxFor(model => model.DealInformation.MasterContractNumber, new { @class = "form-control", @maxlength = "15", dirtyonchange = "" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="MasterContractNumber"
+      [(ngModel)]="DealInformation.MasterContractNumber"
+      readonly="true"
+      maxlength="15"
+    />
+  </div>
+  <!--<div class="form-group deal-setup">
+    <label>Global Customer Name</label>
+     @Html.TextBoxFor(model => model.DealInformation.GlobalCustomerName, new { @class = "form-control", @maxlength = "50", dirtyonchange = "" }) 
+    <input
+      type="text"
+      class="form-control"
+      id="GlobalCustomerName"
+      [(ngModel)]="GlobalCustomerName"
+      readonly="true"
+      maxlength="50"
+    />
+  </div>-->
+  <div class="form-group deal-setup">
+    <label>SPOA</label>
+    <!-- @Html.TextAreaFor(model => model.DealInformation.GovernanceLead, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="GovernanceLead"
+      [(ngModel)]="DealInformation.GovernanceLead"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group deal-setup">
+    <label>Transition Lead</label>
+    <!-- @Html.TextAreaFor(model => model.DealInformation.TransitionLead, new { @class = "form-control", @readonly = "readonly" }) -->
+    <input
+      type="text"
+      class="form-control"
+      id="TransitionLead"
+      [(ngModel)]="DealInformation.TransitionLead"
+      readonly="true"
+    />
+  </div>
+
+  <div class="form-group deal-setup">
+    <label>Weekly status report URL</label>
+    <!-- @{
+        if (Model.DealInformation.WeeklyStatusURLEditable)
+        {
+            <div id="tooltipWeeklyStatus">
+                @Html.TextAreaFor(model => model.DealInformation.WeeklyStatusURL, new { @class = "form-control", dirtyonchange = "" })
+            </div>
+            if (Model.DealInformation.WeeklyStatusURL != null && Model.DealInformation.WeeklyStatusURL != "")
+            {
+                <a target="_blank" href="@Model.DealInformation.WeeklyStatusURL">Click here to View</a>
+            }
+        }
+        else
+        {
+            if (Model.DealInformation.WeeklyStatusURL != null && Model.DealInformation.WeeklyStatusURL != "")
+            {
+                <a target="_blank" href="@Model.DealInformation.WeeklyStatusURL">Click here to View</a>
+            }
+            else
+            {<div id="tooltipWeeklyStatusReport"><label class="form-control">No Updates</label></div>}
+        }
+    } -->
+  </div>
+  <!-- @if ((Model.MMSDetails.SGNM != null) && (Model.MMSDetails.SGNM != "BPO"))
+    {
+        <div class="form-group deal-setup">
+            <label>PSR</label>
+            <select id="psrstatus_" kendo-drop-down-list k-data-source='psrOptions' k-data-text-field="'text'"
+                    k-value-primitive="true" k-data-value-field="'value'" k-[(ngModel)]="'@Model.DealDetail.PSRStatus'"></select>
+
+
+            <label for="PSR status msg">
+                <br />
+                <span style="font-size: small; margin-bottom: 5px; display: inline-block">
+                    Note :  Kindly reach out to <a href="mailto:PSR.support@accenture.com">PSR.support@accenture.com</a>  for getting access to PSR SharePoint.
+                </span>
+            </label>
+
+        </div>
+
+    } -->
+
+  <!-- @if ((Model.MMSDetails.SGNM != null) && (Model.MMSDetails.SGNM != "BPO") && (Model.MMSDetails.SGNM != "BPO,CON - IC"))
+    {
+        if (@Model.DealDetail.DEXStatus == "Eligible")
+        {
+            <div class="form-group deal-setup">
+                <label>DEX</label>
+                <select id="dexstatus_" kendo-drop-down-list k-data-source='psrOptions' k-data-text-field="'text'"
+                        k-value-primitive="true" k-data-value-field="'value'" k-[(ngModel)]="'@Model.DealDetail.DEXStatus'" disabled></select>
+
+
+                <label>
+                    <br />
+                    <span style="font-size: small; margin-bottom: 5px; display: inline-block">
+                        Note :  DEX configuration cannot be modified once made eligible.
+                    </span>
+                </label>
+            </div>
+        }
+        else
+        {
+            <div class="form-group deal-setup">
+                <label>DEX</label>
+                <select id="dexstatus_" kendo-drop-down-list k-data-source='psrOptions' k-data-text-field="'text'"
+                        k-value-primitive="true" k-data-value-field="'value'" k-[(ngModel)]="'@Model.DealDetail.DEXStatus'"></select>
+
+
+                <label>
+                    <br />
+                    <span style="font-size: small; margin-bottom: 5px; display: inline-block">
+                        Note :  DEX configuration cannot be modified once made eligible.
+                    </span>
+                </label>
+            </div>
+        }
+    } -->
+
+  <div class="form-group deal-setup">
+    <label>Vendor Management Scope</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealDetail.VMMScope) -->
+    <!-- <select
+      id="VMMScope_"
+      kendo-drop-down-list
+      k-data-source="yesnoOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      style="width:100%"
+      k-[(ngModel)]="'@Model.DealDetail.VMMScope'"
+      k-change="VMMScope_onchange"
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="yesnoOptions"
+      [(ngModel)]="DealDetail.VMMScope"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>Foxtrot Control Applicable</label>
+    <i class="mandatory">*</i>
+    <!-- @Html.HiddenFor(model => model.DealDetail.FoxtrotControl) -->
+    <!-- <select
+      id="FoxtrotControl_"
+      kendo-drop-down-list
+      k-data-source="yesnoOptions"
+      k-data-text-field="'text'"
+      k-value-primitive="true"
+      k-data-value-field="'value'"
+      style="width:100%"
+      k-[(ngModel)]="'@Model.DealDetail.FoxtrotControl'"
+      k-change="FoxtrotControl_onchange"
+    ></select> -->
+    <kendo-dropdownlist
+      style="width:100%; border: 1px solid #ccc;"
+      [data]="yesnoOptions"
+      [(ngModel)]="DealDetail.FoxtrotControl"
+      textField="text"
+      valueField="value"
+    ></kendo-dropdownlist>
+  </div>
+  <div class="form-group deal-setup">
+    <label>VMM/Foxtrot Comments</label>
+    <i class="mandatory">*</i>
+    <div id="CommentsVMMFoxtrot_">
+      <!-- @Html.TextAreaFor(model => model.DealDetail.CommentsVMMFoxtrot, new { @class = "form-control", @onchange = "CommentsVMMFoxtrot_onchange();", @maxlength = "2000", dirtyonchange = "", @style = "height:100px" }) -->
+      <input
+        type="text"
+        class="form-control"
+        id="CommentsVMMFoxtrot"
+        [(ngModel)]="DealDetail.CommentsVMMFoxtrot"
+        readonly="true"
+        maxlength="2000"
+        style="height:100px"
+      />
+    </div>
+  </div>
+</div>
+

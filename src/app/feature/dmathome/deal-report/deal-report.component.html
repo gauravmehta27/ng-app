@@ -1,0 +1,110 @@
+<!--<link href="./assets/css/transIT-new-styles.css" rel="stylesheet" />-->
+<div>
+    <rebar-layout-dmat></rebar-layout-dmat>
+</div>
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid"  style="margin-top:20px; height:80px;">
+        <div class="navbar-header">
+            <span class="acn-angle-left back-arrow"  [routerLink]="'/'"  style="color:white;font-size:30px;cursor:pointer">
+                <span class="sr-only" >Back</span>
+            </span>
+        </div>
+    </div>
+</header>
+
+<div class="project-staffing" style="padding-top: 50px;margin-top:-32px" >
+    <div class="container-fluid internal-page-title">
+        <h1>
+            Deal Reports
+        </h1>
+    </div>
+    <div class="container" ng-controller="DealReportController" style="height:1000px;">
+        <div class="row pgbg paddingTop15" style="width:90%; padding-left: 50px; ">
+            <div class="wd100p form-group">
+                <div class="wd500">
+                    <div class="dataItem">
+                        <input id="Reporttype1" type="hidden" value=1 />
+                        <label class="col-sm-8 ft15" style="margin-top:9px"><h4><b>Wave Report</b></h4></label>
+                        <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtract',1,'DealWaveReport')" style="margin-top:15px">Download</button>
+                    </div>
+                </div>
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype2" type="hidden" value=2 />
+                    <label class="col-sm-8 ft15" style="margin-top:9px"><h4><b>BE Status Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractDealBE',2,'DealBEReport')" style="margin-top:15px">Download</button>
+                </div>
+
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype3" type="hidden" value=3 />
+                    <label class="col-sm-8 ft15" style="margin-top:9px"><h4><b>SRAT Status Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractDealSRAT',3,'DealSRATReport')" style="margin-top:15px">Download</button>
+                </div>
+
+
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype4" type="hidden" value=4 />
+                    <label class="col-sm-8 ft15" style="margin-top:9px"><h4><b>BaseFTE Comparison Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractBaseFTE',4,'DealBaseFTEReport')" style="margin-top:15px">Download</button>
+                </div>
+
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype5" type="hidden" value=5 />
+                    <label class="col-sm-8  ft15" style="margin-top:9px"><h4><b>Wave Execution Status Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractWave',5,'DealWaveExecutionReport')" style="margin-top:15px">Download</button>
+                </div>
+
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype6" type="hidden" value=6 />
+                    <label class="col-sm-8  ft15" style="margin-top:9px"><h4><b>Project Execution Status Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractProjExec',6,'DealProjectExecutionReport')" style="margin-top:15px">Download</button>
+                </div>
+
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype7" type="hidden" value=7 />
+                    <label class="col-sm-8  ft15" style="margin-top:9px"><h4><b>Budget Cost Summary Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractBdgtTracker',7,'DealBudgetTrackerReport')" style="margin-top:15px">Download</button>
+                </div>
+               
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype8" type="hidden" value=8 />
+                    <label class="col-sm-8 ft15" style="margin-top:9px"><h4><b>Deal Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractingDealReport',8,'DealReport')" style="margin-top:15px">Download</button>
+                </div>
+               
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype9" type="hidden" value=9 />
+                    <label class="col-sm-8  ft15" style="margin-top:9px"><h4><b>Onboarding Tracker Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractSubwaveOnboardingTrackerReport',9,'DealOnboardingTrackerReport')" style="margin-top:15px">Download</button>
+                </div>
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype10" type="hidden" value=10 />
+                    <label class="col-sm-8  ft15" style="margin-top:9px"><h4><b>Feedback Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractFeedbackReport',10,'Feedback_Report')" style="margin-top:15px">Download</button>
+                </div>
+                <div class="wd500 marginTp20">
+                    <input id="Reporttype11" type="hidden" value=11 />
+                    <label class="col-sm-8  ft15" style="margin-top:9px"><h4><b>RepLetter Report</b></h4></label>
+                    <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractRepLetterReport',11,'RepLetter_Report')" style="margin-top:15px">Download</button>
+                </div>
+               
+               
+                    <div class="wd500">
+                        <div class="dataItem">
+                            <input id="Reporttype12" type="hidden" value=12 />
+                            <label class="col-sm-8 ft15" style="margin-top:9px"><h4><b>PA Report</b></h4></label>
+                            <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractPyramidAnalysisReport',12,'PA_Report')" style="margin-top:15px">Download</button>
+                        </div>
+                    </div>
+            
+                        <div class="wd500">
+                            <div class="dataItem">
+                                <input id="Reporttype13" type="hidden" value=13 />
+                                <label class="col-sm-8 ft15" style="margin-top:9px"><h4><b>GNG Report</b></h4></label>
+                                <button class="btn btn-primary" type="button" (click)="ExportExcel('DataExtractGNGReport',13,'GNG_Report')" style="margin-top:15px">Download</button>
+                            </div>
+                        </div>
+                  
+        </div>
+    </div>
+</div>
+      

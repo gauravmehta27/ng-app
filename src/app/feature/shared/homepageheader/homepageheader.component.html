@@ -1,0 +1,132 @@
+<!--@model Accenture.CIO.TransIT.BusinessEntities.AccessInd
+
+
+
+@Html.Partial("~/Areas/Dashboard/Views/Shared/_FeedBack.cshtml")
+
+
+<!-- Notifications StyleSheet-->
+<!--<link href="~/Content/Styles/notifications-widgets.css" rel="stylesheet" />-->
+<!-- Notifications StyleSheet-->
+<!-- Notifications-->
+<!--@Html.Partial("~/Views/Shared/App/Notifications_Framework.cshtml")-->
+<!-- Notifications-->
+<link href="/assets/css/transIT-new-styles.css" rel="stylesheet" />
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid" >
+        <div class="navbar-header">
+            <span class="navbar-brand"><span class="light-text">Trans</span>IT</span>
+        </div>
+        <ul class="nav navbar-nav navbar-right pull-right hidden-xs" role="navigation" >
+            <ng-template [ngIf]="CreateDealAccessInd">
+
+                <li>
+                    <a href="#/" aria-label="Create Project" title="Create Project">
+                        <i class="transIcon-create_project" ng-click="createproject()"></i>
+                    </a>
+                </li>
+            </ng-template>
+
+            <ng-template [ngIf]="ProfileNm!='Client' && Route!='admin'">
+                <li class="dropdown">
+                    <a href aria-label="More Actions" id="moreAction" data-toggle="dropdown" class="more-actions" aria-haspopup="true">
+                        <i class="transIcon-more"></i>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="moreAction" aria-expanded="false">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="mailto:TransIT_L1-support@accenture.com?subject=Query/Request for TransIT_L1-support">Support Requests</a></li>
+                        <li role="presentation"><a target="_blank" role="menuitem" tabindex="-1" href="https://in.accenture.com/operationsmobilization/program-management/trans-it//">Training Resources</a></li>
+                        <li role="presentation"><a target="_blank" role="menuitem" tabindex="-1" href="https://accentureopsworkbench.my.salesforce.com/home/home.jsp/">Take me to MWB</a></li>
+                    </ul>
+
+                </li>
+            </ng-template>
+            <ng-template [ngIf]="HasUserManageAccess">
+
+                <li>
+                    <a routerLink="/user-metrics" aria-label="User Management" title="User Management">
+                        <i class="transIcon-user_management"></i>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="'/Deal-Report'" aria-label="Deal Report" title="Deal Report">
+                    <i  class="dlrpt"></i>
+                    </a>                   
+                </li>
+            </ng-template>
+
+            <li>
+                <a href='javascript:;' aria-label="Feedback" title="Feedback" (click)="openfeedback()" >                
+                    <i class="transIcon-feedback"></i>
+                </a>
+                <!-- <i class="transIcon-feedback" (click)="openfeedback()"></i> -->
+                          
+            </li>
+            <li>
+                <a href="javascript:;" class="notification" style="display:block;" aria-label="Notification" rel="popover" data-popover-content="#notificationPopover">
+                    <i class="acn-bell"><span class="badge" id="badgeid"></span></i>
+                </a>
+            </li>
+            <li>
+                <a href ng-click="redirectToLogout()" aria-label="Logout" class="logout" title="Logout">
+                    <i class="transIcon-logout"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <input type="hidden" id="isfeedbackAvailable" value="false" />
+</header>
+<div id="notificationPopover">
+    <!--<li ng-repeat="item in notifications"><a>{{ item.notes }}</a></li></ul>
+    @*<ul><li ng-repeat="item in notifications"><a>{{ item.notes }}</a></li></ul>*@-->
+    <!--<ul><li ng-show="!notifications.length"><a> No updates available currently</a></li></ul>-->
+
+</div>
+<div  id="feedbackForm" style="display:none"><rebar-feedbackform></rebar-feedbackform></div>   
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+</style>
+
+<style>
+    .notification.popover.fade.in {
+        /*top: 81px !important;*/
+        top: 100px !important;
+        display: block !important;
+        z-index: 1072 !important;
+        background: #222;
+        max-width: 400px;
+        border-radius: 0;
+        border: 1px solid #fff;
+        margin-right: 10px;
+        font-family: 'Arial';
+        /*left: 1000px !important;*/
+    }
+
+    .notification .badge {
+        position: absolute;
+        font-family: 'Arial';
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+        background: #202C3A;
+        display: inline-block;
+        padding: 0;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        top: -2px;
+        right: 10px;
+        line-height: 15px;
+    }
+</style>
+<!--<script src="~/Scripts/FeedBack/FeedBackController.js"></script>
+
+<!-- Notifications Js-->
+<!--<script src="~/Scripts/notifications-widgets.js"></script>-->
+<!-- Notifications Js-->

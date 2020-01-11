@@ -1,0 +1,23 @@
+{
+  "name": "harmonize-alpha4",
+  "version": "1.1.4-alpha",
+  "description": "UI Harmonize Stylesheet ",
+  "main": "css/harmonize-alpha4.css",
+  "scripts": {
+    "scss": "node-sass --output-style compressed dev -o css"
+  },
+  "repository": {},
+  "keywords": [
+    "harmonize"
+  ],
+  "author": "Design Studio - CIO Experience Capability",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "node-sass": "^3.7.0"
+  }
+}

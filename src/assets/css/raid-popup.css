@@ -1,0 +1,58 @@
+﻿.k-grid div.k-grid-header {
+    padding-right: 17px !important;
+}
+
+.grid-comments.popover {
+    background: #F9F8F7;
+    max-width: 500px;
+}
+
+.grid-comments.popover .popover-content {
+    padding: 10px;
+}
+
+.k-grid-content {
+    max-height: 400px;
+}
+
+.grid-comments.popover .popover-content .comments {
+    background: white;
+    border-radius: 3px;
+    width: 470px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 5;
+}
+
+.grid-comments.popover .popover-content .comments .comment-item {
+    padding: 10px 0;
+}
+
+.grid-comments.popover .popover-content .comments .comment-item span {
+    color: #800040;
+}
+
+.grid-comments.popover .popover-content textarea {
+    width: 470px;
+    border: 1px solid #e5e5e5;
+    background: white;
+    height: 100px;
+}
+
+.grid-comments.popover .popover-content > .arrow:after {
+    border-left-color: #F9F8F7;
+}
+
+.grid-comments.fade {
+    z-index: -1;
+}
+
+.grid-comments.fade.in {
+   z-index: 1060;
+}

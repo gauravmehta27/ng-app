@@ -1,0 +1,69 @@
+/*!
+* bootstrap adapter for UI Harmonize Stylesheet
+* Keep changing reference of files that are rewritten
+
+* This file should only include bootstrap + harmonizemixer folder
+
+ */
+
+// Core variables and mixins
+@import "harmonizemixer/variables";
+@import "harmonizemixer/custom-variables";
+@import "bootstrap/mixins";
+@import "harmonizemixer/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+// Core CSS
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms"; //testing without forms 
+
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/animation";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "harmonizemixer/card"; //attaching more
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/responsive-embed";
+@import "bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/utilities-background";
+@import "bootstrap/utilities-spacing";
+@import "bootstrap/utilities-responsive";
+
+// Mixing Custom styles
+@import "harmonizemixer/variables";
+@import "harmonizemixer/navbar";
+@import "harmonizemixer/footer";
+@import "harmonizemixer/checkradio";
+@import "harmonizemixer/forms";

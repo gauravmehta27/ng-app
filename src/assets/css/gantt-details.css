@@ -1,0 +1,143 @@
+﻿.template {
+    margin: 0 -1000px;
+    padding: 0 1000px;
+    width: 100%;
+}
+
+.over {
+    overflow: visible !important;
+    display: inline-block;
+}
+
+.k-task-single {
+    border-color: #ff7a00 !important;
+    background-color: #ff7a00 !important;
+}
+
+.k-task-complete {
+     border-color: #0ea64c !important;
+    background-color: #0ea64c !important;
+}
+
+.k-gantt .k-treelist td {
+    vertical-align: middle;
+}
+
+.k-gantt .k-resource {
+    display: none;
+}
+
+.k-task-template {
+    height: 100%;
+    padding: 2px !important;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.gantt1 {
+    text-align: right !important;
+}
+
+/*.gantt {
+    text-align: center !important;
+}*/
+
+.k-task k-task-milestone {
+}
+
+/*#gantt2 .k-task-milestone, .k-task-summary-complete {
+    border-color: #00DB00 !important;
+    background: #00DB00 !important;
+}*/
+
+
+.k-grid {
+    padding: 0px 0 0px !important;
+}
+
+    .k-grid .k-grid-header .k-header {
+        background: inherit;
+        font-weight: bold;
+        white-space: normal;
+        text-align: center;
+        height: 35px;
+        vertical-align: middle;
+        font-size: 11px;
+    }
+
+.gantt .k-timeline.k-grid.k-widget .k-grid-header tr:nth-child(2) .k-header {   
+    white-space: nowrap;
+    -ms-transform: rotate(270deg) scale(1,0.6) translate(-20px);
+    -webkit-transform: rotate(270deg) scale(1,0.6) translate(-20px);
+    transform:rotate(270deg) scale(1,0.6) translate(-20px);
+    font-weight: normal;
+    font-size: 13px;
+    vertical-align: text-top;
+    padding-top: 30px;
+    overflow: inherit;
+    border-width: 1px 0px 0px 0px;
+    text-align: right;
+    background: transparent !important;
+    /*border-width: 0,0,0,0;
+     width : 280px;*/
+}
+
+.gantt .k-timeline.k-grid.k-widget .k-grid-header tr:nth-child(1) {
+    height: 25px;
+}
+
+.gantt .k-timeline.k-grid.k-widget .k-grid-header tr:nth-child(2) {
+    height: 75px;
+}
+
+.k-gantt .k-treelist .k-grid-header {
+    height : 112px;
+}td
+
+
+/*#gantt1 .k-task-milestone, .k-task-summary-complete{
+    border-color:#ff0000 !important;
+    background :#ff0000 !important;
+}*/
+
+.k-gantt-rowheight .k-task-single {
+    height: -webkit-calc(68%) !important;
+    height: calc(68%) !important;
+}
+
+.gantt .k-grid-content {
+    max-height: none;
+}
+.gantt .k-grid td {
+    border-width: 0px 1px 1px 0px !important;
+    padding: 0px 2px;
+    color: #666;
+    height: 65px;
+    vertical-align: middle;
+    /*background-color: white;*/
+}
+
+.gantt .k-draghandle.k-state-selected:hover, .k-ghost-splitbar-horizontal, .k-ghost-splitbar-vertical, .k-list > .k-state-highlight, .k-list > .gantt.k-state-selected, .k-marquee-color, .k-panel > .k-state-selected, .k-scheduler .k-scheduler-toolbar .k-state-selected, .k-scheduler .k-today.k-state-selected, .k-state-selected, .k-state-selected:link, .k-state-selected:visited {
+    color: #fff;
+    background-color: #0D94D2;
+    border-color: #0D94D2;
+}
+
+.gantt .k-state-hover, .k-state-hover:hover {
+    color: #fff;
+    background-color: #0D94D2;
+    border-color: #0D94D2;
+}
+
+.k-gantt .k-treelist .k-state-selected:hover, .k-gantt .k-treelist .k-state-selected:hover td {
+    background-color: #ffffff;
+    background-image: none;
+}
+
+.k-gantt .k-treelist .k-alt.k-state-selected, .k-gantt .k-treelist .k-alt.k-state-selected > td, .k-gantt .k-treelist .k-state-selected, .k-gantt .k-treelist .k-state-selected td {
+    background-color: #ffffff;
+}
+
+.k-current-time{
+    visibility:hidden;
+}

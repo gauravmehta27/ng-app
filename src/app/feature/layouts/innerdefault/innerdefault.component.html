@@ -1,0 +1,187 @@
+<div ng-class="{'modal-backdrop in':isMegaMenuOpened}"></div>
+<div class="db nano content-wrapper level-2">
+  <!-- <div
+    id="imgMppDiv"
+    style="position: fixed; margin: auto; top: 0; bottom: 0; left: 0; right: 0; Z-INDEX: 99;  opacity: 0.6; filter: alpha(opacity=40); "
+  > -->
+  <!-- background-color: rgb(0, 0, 0); -->
+  <!-- <img src="../../../../assets/img/loader.gif" alt="Loading..." /> -->
+  <!-- </div> -->
+
+  <!-- <img
+    id="imgMpp"
+    src="../../../../assets/img/loader.gif"
+    class="preload-spinner"
+    style="position: absolute; margin: 500px; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 100; width: 50px; height: 50px; margin-left: 600px;"
+  /> -->
+  <!-- <ng-view class="content-view level-3" include-replace> </ng-view> -->
+</div>
+<!-- <input type="hidden" id="hidDealId" value=@Session["DealId"] />
+    <input type="hidden" id="hidDealName" value="@Session["DealName"]" />
+    <input type="hidden" id="hidOppId" value="@Session["opportunityid"]" />
+    <input type="hidden" id="hidClientName" value="@Session["clientname"]" />
+    <input type="hidden" id="loggedinname" value="@Session["Eid"]" />
+    <input type="hidden" id="FirstWaveProcessId" value="@Session["FirstWaveProcessId"]" />
+    <input type="hidden" id="FirstWaveName" value="@Session["FirstWaveName"]" />
+    <input type="hidden" id="FirstBPOWaveProcessId" value="@Session["FirstBPOWaveProcessId"]" />
+    <input type="hidden" id="FirstBPOSratApplicable" value="@Session["FirstBPOSratApplicable"]" />
+    <input type="hidden" id="FirstBPOBEApplicable" value="@Session["FirstBPOBEApplicable"]"/>
+    <input type="hidden" id="SubWaveName" value="@Session["SubWaveName"]" />
+    <input type="hidden" id="SubWaveId" value="@Session["SubWaveId"]" />
+    <input type="hidden" id="FirstEPWorkstreamId" value="@Session["FirstEPWorkstreamId"]" />
+    <input type="hidden" id="FirstTTTWorkstreamId" value="@Session["FirstTTTWorkstreamId"]" />
+    <input type="hidden" id="FirstDTTWorkstreamId" value="@Session["FirstDTTWorkstreamId"]" />
+    <input type="hidden" id="FirstTWEWorkstreamId" value="@Session["FirstTWEWorkstreamId"]" />
+    <input type="hidden" id="FirstSRWorkstreamId" value="@Session["FirstSRWorkstreamId"]" />
+    <input type="hidden" id="DealSG" value="@Session["SG"]"/>
+    <input type="hidden" id="DealSGDEX" value="@Session["SGDEX"]" />
+    <input type="hidden" id="hidDTTReport" value="@Session["DTTReport"]" />
+    <input type="hidden" id="hidKTTReport" value="@Session["KTTReport"]" />
+    <input type="hidden" id="hidAssessmentTTTReport" value="@Session["AssessmentTTTReport"]" />
+    <input type="hidden" id="hidAssessmentDTT" value="@Session["AssessmentDTTReport"]" />
+    <input type="hidden" id="RecruitmentReport" value="@Session["RecruitmentReport"]" />
+    <input type="hidden" id="hidSolutionWorkbookInformation" value="@Session["SolutionWorkbookInformation"]" />
+    <input type="hidden" id="hidProjectScorecard" value="@Session["ProjectScorecard"]" />
+    <input type="hidden" id="hidTWEAccessStatusReport" value="@Session["TWEAccessStatusReport"]" />
+    <input type="hidden" id="hidRAIDReport" value="@Session["RAIDReport"]" />
+    <input type="hidden" id="hidSRTReport" value="@Session["SRTReport"]" />
+    <input type="hidden" id="hidManagementReport" value="@Session["ManagementReport"]" />
+    <input type="hidden" id="redirectType" value="" /> -->
+<div
+  id="divpopupMessageCtl"
+  class="modal fade"
+  style="z-index:10005;"
+  id="myModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width:550px;">
+      @*<button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <i class="acn-cross"></i></button
+      >*@
+      <div class="modal-body text-center" id="divpopupMessage"></div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class=" btn btn-moflow"
+          data-dismiss="modal"
+          id="btnMessageOK"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="ViewDetailModal"
+  tabindex="-1"
+  role="dialog"
+  style="margin-left:-30em"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" style="align-self:center" role="document">
+    <div
+      class="modal-content"
+      style="width: 70em; height: 40em; overflow-y: auto; overflow-x: auto;"
+    >
+      <div class="col-xs-12 page-modal pr0">
+        <h3 class="title themeColor transition-title titstyle">
+          <span class="hdrtiticn"
+            ><span class="tit1style">Baseline Transition Plan</span></span
+          >
+          <button type="button" class="close" data-dismiss="modal">
+            <i class="acn-cross"></i>
+          </button>
+        </h3>
+      </div>
+      <div class="modal-body text-center" id="divpopupMessagecontent">
+        <div id="ViewDetail_Div"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Sub_wave_selector" style="display:none;">
+  <div class="modal-header">
+    <button type="button" class="close dismiss" aria-label="Close">
+      <i class="acn-cross"></i>
+    </button>
+    <h1>Select Wave</h1>
+  </div>
+  <div class="modal-body" ng-controller="wavedetails">
+    <!-- <div id="wave-carousel1" class="carousel slide wave-carousel" data-ride="carousel" data-interval="false" >
+            <div class="carousel-inner">
+                <div class="item" ng-repeat="carouselItem in carouselItems track by $index" ng-class="{'active':$first}">
+                    <ul class="wave-list" ng-repeat="group in getGroupItem($index)">
+                        <li ng-repeat="item in group">
+                            <a href ng-class="{'active':item.name==selectedWave}" ng-click="RedirectToWaveDetails(item)">{{item.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#wave-carousel1" ng-repeat="group in carouselItems" data-slide-to="{{$index}}" ng-class="{'active':$first}"></li>
+            </ol>
+        </div> -->
+  </div>
+  <div class="modal-footer">&nbsp;</div>
+</div>
+<div id="Sub_wave_selector_gng" style="display:none;">
+  <div class="modal-header">
+    <button type="button" class="close dismiss" aria-label="Close">
+      <i class="acn-cross"></i>
+    </button>
+    <h1>Select Wave</h1>
+  </div>
+  <div class="modal-body" ng-controller="gngwavedetails">
+    <div
+      id="wave-carousel1"
+      class="carousel slide wave-carousel"
+      data-ride="carousel"
+      data-interval="false"
+    >
+      <div class="carousel-inner">
+        <!-- <div class="item" ng-repeat="carouselItem in carouselItems track by $index" ng-class="{'active':$first}">
+                  <ul class="wave-list" ng-repeat="group in getGroupItem($index)">
+                      <li ng-repeat="item in group">
+                          <a href ng-class="{'active':item.name==selectedWave}" ng-click="RedirectToGNGWaves(item)">{{item.name}}</a>
+                      </li>
+                  </ul>
+              </div> -->
+      </div>
+      <ol class="carousel-indicators">
+        <!-- <li data-target="#wave-carousel1" ng-repeat="group in carouselItems" data-slide-to="{{$index}}" ng-class="{'active':$first}"></li> -->
+      </ol>
+    </div>
+  </div>
+  <div class="modal-footer">&nbsp;</div>
+</div>
+
+<div>
+  <!-- *ngIf="accessCode.Contains('U')" -->
+  <footer class="show">
+    <div class="action-btn-footer container-fluid">
+      <button
+        id="btn_markComplete"
+        type="submit"
+        class="btn btn-primary"
+        style="display:none"
+      >
+        Mark Complete
+      </button>
+      <!-- ng-click="MarkCompleteDealSetup()" @(Model.DealDetail.DealSetUpStatus == "Completed" ? "disabled" : "")  -->
+      <button type="submit" class="btn btn-primary" (click)= "dealInfoService.changeTest('info')" >Save</button>
+      <!-- ng-click="ValidateDealSetup()" -->
+    </div>
+  </footer>
+</div>

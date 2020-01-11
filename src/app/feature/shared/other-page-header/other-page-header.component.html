@@ -1,0 +1,989 @@
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../../../../assets/css/transIT-new-styles.css" rel="stylesheet" />
+<link href="/assets/css/acn-icons.css" rel="stylesheet" />
+<link href="/assets/css/transIT-custom-styles.css" rel="stylesheet" />
+
+<div
+  id="imgBookMarkDiv"
+  style="position: absolute; margin: auto; top: 0; bottom: 0; left: 0; right: 0; Z-INDEX: 2000; background-color: #ffffff; opacity: 0.4; filter: alpha(opacity=40); display:none "
+></div>
+<img
+  src="../../../../assets/img/loading.gif"
+  id="imgBookMark"
+  style="position: absolute; margin: auto; top: 275px; left: 0; right: 0; Z-INDEX: 2002; display:none"
+/>
+<header class="navbar navbar-inverse navbar-fixed-top transIT-inner">
+  <a class="acn-angle-left back-arrow">
+    <span class="sr-only">Back</span>
+  </a>
+  <!-- href ng-click="ReturntoDmatHome()" -->
+  <div class="container-fluid ">
+    <div class="navbar-header">
+      <div class="proj-code">{{OpportunityId}} | {{clientname}}</div>
+      <h1 class="navbar-brand Header-DealName-qlize" show-tooltip-on-text-overflow="">{{DealName}}</h1>
+      <!-- overtitle="{{DealName}}" -->
+  </div>
+    <div class="navbar-header">
+      <div class="proj-code"></div>
+      <!-- {{ OpportunityId }} | {{ clientname }} -->
+      <h1
+        class="navbar-brand Header-DealName-Casecapitalize"
+        show-tooltip-on-text-overflow=""
+      >
+        <!-- {{ DealName }} -->
+      </h1>
+    </div>
+    <ul class="header-nav hidden-xs" role="menu">
+      <li
+        class="dropdown"
+        role="menuitem"
+        [class.open]="clickedIndex == 0"
+        (click)="isLinkClicked(0)"
+      >
+        <!-- [class.open]="clickedIndex==0" 
+        (click)="isLinkClicked(0)" -->
+        <!-- [ngClass]="clickedIndex == 0 ? 'dropdown open' : 'dropdown'" -->
+        <!-- ng-class="{active:mainPage=='plan'}" class="dropdown" -->
+        <!-- <a> href class="dropdown-toggle" data-toggle="dropdown" -->
+        <a> <span class="transIcon-plan icon"></span>Plan </a>
+        <div class="dropdown-menu megaMenu">
+          <button type="button" class="close" (click)="isLinkClosed()">
+            <!-- <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            > -->
+            <span class="acn-cross"></span>
+          </button>
+          <div class="nav-content row">
+            <div class="col-sm-5 megaMenu-info">
+              <div class="module-title">Plan</div>
+              <p class="module-details">
+                The Plan/Setup module explains on the Project Setup and Wave
+                setup process. It enables based on the current level of service,
+                defines the service framework and processes. Setup is done by
+                the transition team as part of Project Execution and Tracking.
+              </p>
+              <div class="bookmark-info">
+                <span class="transIcon-bookmarked"></span>Select to dock the
+                screen to your quick access menu
+              </div>
+            </div>
+            <div class="col-sm-7 megaMenu-links">
+              <ul class="menu-links col-sm-6">
+                <li>
+                  Deal Information
+                  <!-- <a href="/ProjectSetup/Deal/Index/?id=1">Deal Information</a>
+                  <a
+                    href
+                    class="bookmark"
+                    ng-click="bookmark('Plan', 'Deal Information','deal-info')"
+                    ng-class="{'docked':inDock('deal-info')}"
+                    aria-label="Bookmark Deal Info"
+                  >
+                    <span class="transIcon-bookmarked"></span> 
+                  </a>-->
+                </li>
+                <li>
+                  MEC Checklist
+                  <!-- <a href="/ProjectSetup/ProjectSetup/MECPage/?id=4"
+                    >MEC Checklist</a
+                  >
+                  <a
+                    href
+                    class="bookmark"
+                    ng-click="bookmark('Plan', 'MEC Checklist','mec')"
+                    ng-class="{'docked':inDock('mec')}"
+                    aria-label="Bookmark MEC Checklist"
+                  >
+                    <span class="transIcon-bookmarked"></span>
+                  </a> -->
+                </li>
+                <li>
+                  Transition Plan
+                  <!-- <a href="/ProjectSetup/ProjectSetup/ProjectSetup/?id=2"
+                    >Transition Plan</a
+                  >
+                  <a
+                    href
+                    class="bookmark"
+                    ng-click="bookmark('Plan', 'Transition Plan','transition-plan')"
+                    ng-class="{'docked':inDock('transition-plan')}"
+                    aria-label="Bookmark Transition Plan"
+                  >
+                    <span class="transIcon-bookmarked"></span>
+                  </a> -->
+                  <ul>
+                    <li>
+                      Project Workstream
+                      <!-- <a
+                        href="/ProjectSetup/ProjectSetup/ProjectSetup?pagename=0"
+                        ng-click="navigateTransition(1)"
+                        >Project Workstream</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/ProjectSetup/ProjectSetup/ProjectSetup?pagename=1"
+                        ng-click="navigateTransition(2)"
+                        >Wave Setup</a
+                      > -->
+                    </li>
+                    <li>
+                      Wave Workstream Setup
+                      <!-- <a
+                        href="/ProjectSetup/ProjectSetup/ProjectSetup?pagename=2"
+                        ng-click="navigateTransition(3)"
+                        >Wave Workstream Setup</a
+                      > -->
+                    </li>
+                    <li>
+                      Gantt Chart
+                      <!-- <a
+                        href="/ProjectSetup/ProjectSetup/ProjectSetup?pagename=3"
+                        ng-click="navigateTransition(4)"
+                        >Gantt Chart</a
+                      > -->
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Project Staffing
+                  <!-- <a href="/ProjectSetup/Staffing/Staffing/?id=3"
+                    >Project Staffing</a
+                  >
+                  <a
+                    href
+                    class="bookmark"
+                    ng-click="bookmark('Plan', 'Project Staffing','proj-staffing')"
+                    ng-class="{'docked':inDock('proj-staffing')}"
+                    aria-label="Bookmark Project Staffing"
+                  >
+                    <span class="transIcon-bookmarked"></span>
+                  </a> -->
+                </li>
+                <li>
+                  Project Artifacts
+                  <!-- <a
+                    href="/ProjectSetup/RisksandAssumptions/UploadDocuments/?id=7"
+                    >Project Artifacts</a
+                  >
+                  <a
+                    href
+                    class="bookmark"
+                    ng-click="bookmark('Plan', 'Project Artifacts','proj-artifacts')"
+                    ng-class="{'docked':inDock('proj-artifacts')}"
+                    aria-label="Bookmark Project Artifacts"
+                  >
+                    <span class="transIcon-bookmarked"></span>
+                  </a> -->
+                </li>
+              </ul>
+              <ul class="menu-links col-sm-6">
+                <li>
+                  Project Plan Setup
+                  <!-- <a href="/ProjectSetup/DetailedPlan/Index/"
+                    >Project Plan Setup</a
+                  >
+                  <a
+                    href
+                    class="bookmark"
+                    ng-click="bookmark('Plan', 'Project Plan Setup','proj-plan')"
+                    ng-class="{'docked':inDock('proj-plan')}"
+                    aria-label="Bookmark Project Plan"
+                  >
+                    <span class="transIcon-bookmarked"></span>
+                  </a> -->
+                  <ul>
+                    <li>
+                      Current Project Plan
+                      <!-- <a
+                        href="/ProjectSetup/DetailedPlan/Index?pagename=0"
+                        ng-click="navigateTransition(1)"
+                        >Current Project Plan</a
+                      > -->
+                    </li>
+                    <li>
+                      Baselines
+                      <!-- <a
+                        href="/ProjectSetup/DetailedPlan/Index?pagename=1"
+                        ng-click="navigateTransition(2)"
+                        >Baselines</a
+                      > -->
+                    </li>
+                    <li>
+                      Gantt Chart
+                      <!-- <a
+                        href="/ProjectSetup/DetailedPlan/Index?pagename=2"
+                        ng-click="navigateTransition(3)"
+                        >Gantt Chart</a
+                      > -->
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="dropdown"
+        role="menuitem"
+        [class.open]="clickedIndex == 1"
+        (click)="isLinkClicked(1)"
+      >
+        <!-- [class.dropdown]="clickedIndex==1" [class.dropdown
+        open]="clickedIndex!=1" (click)="isLinkClicked(1)" -->
+        <!-- class="dropdown" -->
+        <!-- ng-class="{active:mainPage=='execution'}" -->
+        <a> <span class="transIcon-execution icon"></span>Execution </a>
+        <div class="dropdown-menu megaMenu">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span class="acn-cross"></span>
+          </button>
+          <div class="nav-content row">
+            <div class="col-sm-5 megaMenu-info">
+              <div class="module-title">Execution</div>
+              <p class="module-details">
+                Updates to workstreams at Project Level & Wave Level, trackers &
+                checklists updates and associated approval workflow, are
+                captured at the Execution phase.
+              </p>
+              <div class="bookmark-info">
+                <span class="transIcon-bookmarked"></span>Select to dock the
+                screen to your quick access menu
+              </div>
+            </div>
+            <div class="col-sm-7 megaMenu-links">
+              <div class="exe-menu" ng-scrollbar>
+                <ul class="menu-links col-sm-6">
+                  <li>
+                    Deal Execution
+                    <!-- <a href="/ProjectExecution/DealExecution/DealExecution/">Deal Execution</a>
+                                <a href class="bookmark" ng-click="bookmark('Execution', 'Deal Execution','deal-execution')" ng-class="{'docked':inDock('deal-execution')}"
+                                   aria-label="Bookmark Deal Execution">
+                                    <span class="transIcon-bookmarked"></span>
+                                </a> -->
+                  </li>
+                  <li>
+                    Project Plan
+                    <!-- <a href="/projectexecution/projectplan/projectplan">Project Plan</a>
+                                <a href class="bookmark" ng-click="bookmark('Execution', 'Project Plan(Actuals)','project-plan')" ng-class="{'docked':inDock('project-plan')}"
+                                   aria-label="Bookmark Project Plan">
+                                    <span class="transIcon-bookmarked"></span>
+                                </a> -->
+                  </li>
+                  <li>
+                    Project Staffing
+                    <!-- <a href ng-click="RedirectToProjectStaffing()">Project Staffing</a>
+                                <a href class="bookmark" ng-click="bookmark('Execution', 'Project Staffing(Actuals)','exe-proj-staffing')" ng-class="{'docked':inDock('exe-proj-staffing')}"
+                                   aria-label="Bookmark Project Staffing(Actuals)">
+                                    <span class="transIcon-bookmarked"></span>
+                                </a> -->
+                  </li>
+                  <li>
+                    Execution Summary
+                    <!-- <a href ng-click="RedirecTExecutionDash()">Execution Summary</a>
+                                <span href class="bookmark docked"
+                                      aria-label="Bookmark Execution Summary">
+                                    <span class="transIcon-bookmarked"></span>
+                                </span> -->
+                  </li>
+                  <!-- @if (HttpContext.Current.Session["FirstWaveProcessId"] != null)
+                            {
+                                <input id="EPApplicable" type="hidden" value="@Convert.ToBoolean(HttpContext.Current.Session["EPApplicable"])" />
+                                <input id="TTTApplicable" type="hidden" value="@Convert.ToBoolean(HttpContext.Current.Session["TTTApplicable"])" />
+                                <input id="DTTApplicable" type="hidden" value="@Convert.ToBoolean(HttpContext.Current.Session["DTTApplicable"])" />
+                                <input id="SRApplicable" type="hidden" value="@Convert.ToBoolean(HttpContext.Current.Session["SRApplicable"])" />
+                                <input id="TWEApplicable" type="hidden" value="@Convert.ToBoolean(HttpContext.Current.Session["TWEApplicable"])" />
+                                <li>
+                                    <a href ng-click="RedirectWaveDetails()">Wave Details</a>
+                                    <a href class="bookmark" ng-click="bookmark('Wave Details', 'Wave Details','wave-details')" ng-class="{'docked':inDock('wave-details')}"
+                                       aria-label="Bookmark Wave Details">
+                                        <span class="transIcon-bookmarked"></span>
+                                    </a>
+                                </li>
+
+
+                                <li class="sub-item">
+                                    @if (Convert.ToBoolean(HttpContext.Current.Session["EPApplicable"]) == true)
+                                    {
+                                        <a href ng-click="RedirectEP()">Enable People</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Enable People','enable-people')" ng-class="{'docked':inDock('enable-people')}"
+                                           aria-label="Bookmark Enable People">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href ng-click="RedirectNA('Enable People')">Enable People</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Enable People','enable-people')" ng-class="{'docked':inDock('enable-people')}"
+                                           aria-label="Bookmark Enable People">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    <ul>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["EPApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectEPActivity()">Activity</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Enable People')">Activity</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["EPApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectSDO()">SDO Staffing</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Enable People')">SDO Staffing</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["EPApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTravelTracker()">Travel Tracker</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Enable People')">Travel Tracker</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="sub-item">
+                                    @if (Convert.ToBoolean(HttpContext.Current.Session["TTTApplicable"]) == true)
+                                    {
+                                        <a href ng-click="RedirectTTT()">Train the Trainer</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Train the Trainer','train-the-trainer')" ng-class="{'docked':inDock('train-the-trainer')}"
+                                           aria-label="Bookmark Train the Trainer">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href ng-click="RedirectNA('Train the Trainer')">Train the Trainer</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Train the Trainer','train-the-trainer')" ng-class="{'docked':inDock('train-the-trainer')}"
+                                           aria-label="Bookmark Train the Trainer">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+
+                                    <ul>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTTTActivity()">Activity</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Train the Trainer')">Activity</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTTTTracker()">TTT Tracker</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Train the Trainer')">TTT Tracker</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectDTPTTTTracker()">DTP/Runbooks Tracker</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Train the Trainer')">DTP/Runbooks Tracker</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTTTAssessment()">TTT Assessment</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Train the Trainer')">TTT Assessment</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTTTApproval()">Approvals</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Train the Trainer')">Approvals</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            } -->
+                </ul>
+                <!-- @if (HttpContext.Current.Session["FirstWaveProcessId"] != null)
+                        {
+                            <ul class="menu-links col-sm-6">
+
+                                <li class="sub-item">
+                                    @if (Convert.ToBoolean(HttpContext.Current.Session["DTTApplicable"]) == true)
+                                    {
+                                        <a href ng-click="RedirectDTT()">Delivery Team Training</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Delivery Team Training','del-team-training')" ng-class="{'docked':inDock('del-team-training')}"
+                                           aria-label="Bookmark Delivery Team Training">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href ng-click="RedirectNA('Delivery Team Training')">Delivery Team Training</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Delivery Team Training','del-team-training')" ng-class="{'docked':inDock('del-team-training')}"
+                                           aria-label="Bookmark Delivery Team Training">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    <ul>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["DTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectDTTActivity()">Activity</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Delivery Team Training')">Activity</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["DTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectDTTTracker()">DTT Tracker</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Delivery Team Training')">DTT Tracker</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["DTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectDTPDTTTracker()">DTP/Runbooks Tracker</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Delivery Team Training')">DTP/Runbooks Tracker</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["DTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectDTTAssessment()">DTT Assessment</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Delivery Team Training')">DTT Assessment</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["DTTApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectDTTApproval()">Approvals</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Delivery Team Training')">Approvals</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="sub-item">
+                                    @if (Convert.ToBoolean(HttpContext.Current.Session["TWEApplicable"]) == true)
+                                    {
+                                        <a href ng-click="RedirectTWE()">Tech &amp; Work Environment</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Tech &amp; Work Environment','tech-work-environment')" ng-class="{'docked':inDock('tech-work-environment')}"
+                                           aria-label="Bookmark Tech &amp; Work Environment">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href ng-click="RedirectNA('Tech And Work Environment')">Tech &amp; Work Environment</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Tech &amp; Work Environment','tech-work-environment')" ng-class="{'docked':inDock('tech-work-environment')}"
+                                           aria-label="Bookmark Tech &amp; Work Environment">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    <ul>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TWEApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTWEActivity()">Activity</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Tech And Work Environment')">Activity</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TWEApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTWETracker()">TWE Tracker</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Tech And Work Environment')">TWE Tracker</a>
+                                            }
+                                        </li>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["TWEApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectTWEAccessTracker()">TWE Access Tracker</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Tech And Work Environment')">TWE Access Tracker</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="sub-item">
+                                    @if (Convert.ToBoolean(HttpContext.Current.Session["SRApplicable"]) == true)
+                                    {
+                                        <a href ng-click="RedirectSR()">Service Rehearsal Test (SRT)</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Service Rehearsal Test (SRT)','service-readiness')" ng-class="{'docked':inDock('service-readiness')}"
+                                           aria-label="Bookmark Service Readiness">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href ng-click="RedirectNA('Service Readiness')">Service Rehearsal Test (SRT)</a>
+                                        <a href class="bookmark" ng-click="bookmark('Execution', 'Service Rehearsal Test (SRT)','service-readiness')" ng-class="{'docked':inDock('service-readiness')}"
+                                           aria-label="Bookmark Service Readiness">
+                                            <span class="transIcon-bookmarked"></span>
+                                        </a>
+                                    }
+                                    <ul>
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["SRApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectSRActivity()">Activity</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Service Readiness')">Activity</a>
+                                            }
+                                        </li>
+                                        @if (Convert.ToBoolean(HttpContext.Current.Session["SRApplicable"]) == true)
+                                        {
+                                            if (HttpContext.Current.Session["WaveSG"] != null)
+                                            {
+                                                if (HttpContext.Current.Session["WaveSG"].ToString() == "BPO")
+                                                {
+                                                    <li>
+                                                        <a href ng-click="RedirectBPSSRTAssess()">BPO: SRT Assessment</a>
+                                                    </li>
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (HttpContext.Current.Session["WaveSG"] != null)
+                                            {
+                                                if (HttpContext.Current.Session["WaveSG"].ToString() == "BPO")
+                                                {
+                                                    <li>
+                                                        <a href ng-click="RedirectNA('Service Readiness')">BPO: SRT Assessment</a>
+                                                    </li>
+                                                }
+                                            }
+                                        }
+                                        @if (Convert.ToBoolean(HttpContext.Current.Session["SRApplicable"]) == true)
+                                        {
+                                            if (HttpContext.Current.Session["WaveSG"] != null)
+                                            {
+                                                if (HttpContext.Current.Session["WaveSG"].ToString() == "IO")
+                                                {
+                                                    <li>
+                                                        <a href ng-click="RedirectIOSRTAssess()">IO: SRT Assessment</a>
+                                                    </li>
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (HttpContext.Current.Session["WaveSG"] != null)
+                                            {
+                                                if (HttpContext.Current.Session["WaveSG"].ToString() == "IO")
+                                                {
+                                                    <li>
+                                                        <a href ng-click="RedirectNA('Service Readiness')">IO: SRT Assessment</a>
+                                                    </li>
+                                                }
+                                            }
+                                        }
+                                        <li>
+                                            @if (Convert.ToBoolean(HttpContext.Current.Session["SRApplicable"]) == true)
+                                            {
+                                                <a href ng-click="RedirectSRTApproval()">Approvals</a>
+                                            }
+                                            else
+                                            {
+                                                <a href ng-click="RedirectNA('Service Readiness')">Approvals</a>
+                                            }
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="sub-item">
+                                    @if (HttpContext.Current.Session["FirstBPOWaveProcessId"] != null)
+                                    {
+
+                                        <a href ng-click="RedirectSRAT()">Checkpoints</a>
+
+                                        <ul>
+                                            @*@if (HttpContext.Current.Session["FirstBPOSRATApplicable"].ToString() == "Y")
+                                                {*@
+                                            <li>
+                                                <a href ng-click="RedirectSRAT()">BPO: SRAT</a>
+                                                <a href class="bookmark" ng-click="bookmark('Execution', 'BPO: SRAT','srat')" ng-class="{'docked':inDock('srat')}"
+                                                   aria-label="Bookmark Business Excellence">
+                                                    <span class="transIcon-bookmarked"></span>
+                                                </a>
+                                            </li>
+
+                                            <input id="bmSG" type="hidden" value="@HttpContext.Current.Session["SG"].ToString()" />
+                                            <input id="SGDEX" type="hidden" value="@HttpContext.Current.Session["SGDEX"].ToString()" />
+                                            @*@if (HttpContext.Current.Session["FirstBPOBEApplicable"].ToString() == "Y")
+                                                {*@
+                                            <li>
+                                                <a href ng-click="RedirectBE()">Business Excellence</a>
+                                                <a href class="bookmark" ng-click="bookmark('Stablization', 'Business Excellence','biz-excellence')" ng-class="{'docked':inDock('biz-excellence')}"
+                                                   aria-label="Bookmark Business Excellence">
+                                                    <span class="transIcon-bookmarked"></span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                    }
+                                </li>
+
+                            </ul>
+                        } -->
+              </div>
+            </div>
+            <!--<div>
+                              <a href class="megaMenu-left" style="display:none;" aria-label="Next"><span class="transIcon-megamenu_back_arrow"></span></a>
+                              <a href class="megaMenu-right" aria-label="Next"><span class="transIcon-manage_bookmarks"></span></a>
+                          </div>-->
+          </div>
+        </div>
+      </li>
+      <li
+        class="dropdown"
+        role="menuitem"
+        [class.open]="clickedIndex == 2"
+        (click)="isLinkClicked(2)"
+      >
+        <!-- ng-class="{active:mainPage=='pmo'}" -->
+        <a>
+          <span class="transIcon-PMO_and_governance icon"></span>PMO &
+          Governance
+        </a>
+        <div class="dropdown-menu megaMenu">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span class="acn-cross"></span>
+          </button>
+          <div class="nav-content row">
+            <div class="col-sm-5 megaMenu-info">
+              <div class="module-title">PMO & Governance</div>
+              <p class="module-details">
+                PMO includes managing of RAID’s, Financials, MOS/Meetings and
+                Stage Gates of the Transition, while Governance focuses on role
+                expectations and key concepts around Governing Mobilization
+                engagements.
+              </p>
+              <div class="bookmark-info">
+                <span class="transIcon-bookmarked"></span>Select to dock the
+                screen to your quick access menu
+              </div>
+            </div>
+            <div class="col-sm-7 megaMenu-links">
+              <ul class="menu-links col-sm-6">
+                <li>
+                  PCT Kit
+                  <!-- <a href="/ControlFramework/ControlFramework/ControlFramework">PCT Kit</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'PCT KIT','pct-kit')" ng-class="{'docked':inDock('pct-kit')}" aria-label="Bookmark PCT Kit">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+                <li>
+                  Meetings
+                  <!-- <a href ng-click="RedirectPMOmeeting()">Meetings</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'Meetings','meetings')" ng-class="{'docked':inDock('meetings')}" aria-label="Bookmark Meetings">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+                <li>
+                  Project Logs
+                  <!-- <a href ng-click="RedirectProjectlogs()">Project Logs</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'Project Logs','project-log')" ng-class="{'docked':inDock('project-log')}"
+                               aria-label="Bookmark Project Logs">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                  <ul>
+                    <li>
+                      Risks
+                      <!-- <a href="/PMO/PMOLogs/PMO?pagename=0&fromSnapshot=false">Risks</a> -->
+                    </li>
+                    <li>
+                      Issues
+                      <!-- <a href="/PMO/PMOLogs/PMO?pagename=1&fromSnapshot=false">Issues</a> -->
+                    </li>
+                    <li>
+                      Actions
+                      <!-- <a href="/PMO/PMOLogs/PMO?pagename=2&fromSnapshot=false">Actions</a> -->
+                    </li>
+                    <li>
+                      Decisions
+                      <!-- <a href="/PMO/PMOLogs/PMO?pagename=3&fromSnapshot=false">Decisions</a> -->
+                    </li>
+                    <li>
+                      Assumptions
+                      <!-- <a href="/PMO/PMOLogs/PMO?pagename=4&fromSnapshot=false">Assumptions</a> -->
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Change Management
+                  <!-- <a href="/PMO/ChangeLog/Change/">Change Management</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'Change Management','change-management')" ng-class="{'docked':inDock('change-management')}"
+                               aria-label="Bookmark Change Management">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+                <!-- @*<li>
+                                <a href ng-click="RedirectContractualmang()">Contractual Management</a>
+                                <a href class="bookmark" ng-click="bookmark('Pmo', 'Contrctual Management','con-management')" ng-class="{'docked':inDock('con-management')}"
+                                   aria-label="Bookmark Contrctual Management">
+                                    <span class="transIcon-bookmarked"></span>
+                                </a>
+                            </li>*@ -->
+                <li>
+                  Finance Management
+                  <!-- <a href ng-click="RedirectFinanceMang()">Finance Management</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'Finance Management','fin-management')" ng-class="{'docked':inDock('fin-management')}"
+                               aria-label="Bookmark Finance Management">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+                <li>
+                  Solution Pyramid Analysis
+                  <!-- <a href="/SolutionPyramidAnalysis/SolutionPyramidAnalysis/SolutionPyramidAnalysis">Solution Pyramid Analysis</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'Solution Pyramid Analysis','spa')" ng-class="{'docked':inDock('spa')}"
+                                aria-label="Bookmark Solution Pyramid Analysis">
+                            <span class="transIcon-bookmarked"></span> 
+                    </a>-->
+                </li>
+              </ul>
+              <ul class="menu-links col-sm-6">
+                <li>
+                  Governance
+                  <!-- <a href="/StageGate/StageGate/Dashboard">Governance</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'Governance','governance')" ng-class="{'docked':inDock('governance')}"
+                               aria-label="Bookmark Governance">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+              </ul>
+
+              <ul class="menu-links col-sm-6">
+                <li>
+                  GNG Checklist
+                  <!-- <a href="/PMO/GoNoGo/Dashboard">GNG Checklist</a>
+                            <a href class="bookmark" ng-click="bookmark('Pmo', 'GNG Checklist','GNG')" ng-class="{'docked':inDock('GNG')}"
+                               aria-label="Bookmark GNG">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+              </ul>
+
+              <ul class="menu-links col-sm-6">
+                <!-- @if (HttpContext.Current.Session["PSRValue"] != null)
+                        {
+                            if (HttpContext.Current.Session["PSRValue"].ToString() == "Eligible")
+                            {
+                                <input id="PSRValue" type="hidden" value="@HttpContext.Current.Session["PSRValue"].ToString()" />
+                                <input id="PSRValueLink" type="hidden" value="@Session["PSRLink"]/@Session["opportunityid"].ToString()?csf =1" />
+                                <li>
+                                    <a target="_blank" href="@Session["PSRLink"]/@Session["opportunityid"].ToString()?csf =1">PSR</a>
+                                    <a href class="bookmark" ng-click="bookmark('Pmo', 'PSR','psr')" ng-class="{'docked':inDock('psr')}"
+                                       aria-label="Bookmark PSR">
+                                        <span class="transIcon-bookmarked"></span>
+                                    </a>
+                                </li>
+                            }
+                        } -->
+              </ul>
+
+              <ul class="menu-links col-sm-6">
+                <!-- @if (HttpContext.Current.Session["DEXValue"] != null)
+                        {
+                            if (HttpContext.Current.Session["DEXValue"].ToString() == "Eligible")
+                            {
+                                <input id="DEXValue" type="hidden" value="@HttpContext.Current.Session["DEXValue"].ToString()" />
+                                <li>
+                                    <a href="/WaveExecution/DeliveryExcellence/DeliveryExcellence">DEX</a>
+                                    <a href class="bookmark" ng-click="bookmark('Pmo', 'DEX','dex')" ng-class="{'docked':inDock('dex')}"
+                                       aria-label="Bookmark DEX">
+                                        <span class="transIcon-bookmarked"></span>
+                                    </a>
+                                </li>
+                            }
+                        } -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="dropdown"
+        role="menuitem"
+        [class.open]="clickedIndex == 3"
+        (click)="isLinkClicked(3)"
+      >
+        <a>
+          <span class="transIcon-quick-link icon"></span>
+          Quick Links
+        </a>
+        <!-- ng-class="{active:mainPage=='quick-links'}" -->
+        <!-- <a href="/WaveExecution/QuickLinks/QuickLinks">
+            <span class="transIcon-quick-link icon"></span>Quick Links
+        </a> -->
+      </li>
+      <li
+        role="menuitem"
+        class="dropdown"
+        role="menuitem"
+        [class.open]="clickedIndex == 4"
+        (click)="isLinkClicked(4)"
+      >
+        <!-- dropdown open // this class needs to be applied to show the html -->
+        <a> <span class="transIcon-stabilization icon"></span> Stabilization </a>
+        <!-- ng-class="{active:mainPage=='Stablization'}" -->
+        <!-- <a href class="dropdown-toggle" data-toggle="dropdown">
+            <span class="transIcon-stabilization icon"></span>Stabilization
+        </a> -->
+        <div class="dropdown-menu megaMenu">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span class="acn-cross"></span>
+          </button>
+          <div class="nav-content row">
+            <div class="col-sm-5 megaMenu-info">
+              <div class="module-title">Stabilization</div>
+              <p class="module-details">
+                Stabilization phase begins post Go-live and continues approx.,
+                90 days. In this phase the Mobilization team closes all agreed
+                actions and hands-over responsibility to the service delivery on
+                ownership during Run Phase.
+              </p>
+              <div class="bookmark-info">
+                <span class="transIcon-bookmarked"></span>Select to dock the
+                screen to your quick access menu
+              </div>
+            </div>
+            <div class="col-sm-7 megaMenu-links">
+              <ul class="menu-links col-sm-6">
+                <li>
+                  Stabilization Summary
+                  <!-- <a href ng-click="RedirectStabilizationSummary()">Stabilization Summary</a>
+
+                            <a href class="bookmark" ng-click="bookmark('Stablization', 'Stabilization Summary','stabilization-summary')" ng-class="{'docked':inDock('stabilization-summary')}"
+                               aria-label="Bookmark Stabilization Summary">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+
+                <li>
+                  30/60/90 Day(Tracking)
+                  <!-- <a href ng-click="RedirectWaveReport('Handover')">30/60/90 Day(Tracking)</a>
+                            <a href class="bookmark" ng-click="bookmark('Stablization', '30/60/90 Day Plan','tracking-days')" ng-class="{'docked':inDock('tracking-days')}"
+                               aria-label="Bookmark 30/60/90 Day plan">
+                                <span class="transIcon-bookmarked"></span>
+                            </a> -->
+                </li>
+                <!-- @*@if (HttpContext.Current.Session["WaveSG"] != null)
+                            {
+                                if (HttpContext.Current.Session["WaveSG"].ToString() == "IO")
+                                {
+                            <li>
+                                <a href>IO-Dex</a>
+                                <a href class="bookmark" ng-click="bookmark('Stablization', 'IO-Dex','io-dex')" ng-class="{'docked':inDock('io-dex')}" aria-label="Bookmark IO-Dex">
+                                    <span class="transIcon-bookmarked"></span>
+                                </a>
+                            </li>
+                                }
+                            }*@ -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+<!-- <ul class="nav navbar-nav navbar-right pull-right hidden-xs" role="navigation">
+
+    <li class="ng-scope" ng-click="openFeedback()">
+        <a href aria-label="User Feedback" title="Feedback">
+            <i class="transIcon-feedback"></i>
+        </a>
+    </li>
+    <li>
+        <a href="/ProjectSetup/ProjUserAccess/ProjUserAccess">
+            <i class="transIcon-user_access icon"></i>
+        </a>
+    </li>
+    @*<li>
+
+        <a href="javascript:;" class="notification" aria-label="Notification" rel="popover" data-popover-content="#notificationPopover">
+            <i class="acn-bell"><span class="badge" id="badgeid"></span></i>
+        </a>
+    </li>*@
+    <li>
+        <a href ng-click="redirectToLogout()" aria-label="Logout">
+            <i class="transIcon-logout"></i>
+        </a>
+    </li>
+</ul> -->
+<!-- </header> -->

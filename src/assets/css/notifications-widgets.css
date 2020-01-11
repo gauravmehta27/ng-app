@@ -1,0 +1,124 @@
+﻿/*Alert Bar CSS Start*/
+
+.acn-alert-item {
+    background-color: #fff !important;
+    padding-top: 13px !important;
+}
+.modal-dialog {
+    padding-top: 60px !important;
+}
+.acn-alert-msg {
+    color: #666 !important;
+    font-weight: normal !important;
+    font-family: Graphik Web !important;
+    font-size: 12px !important;
+}
+.navbar-fixed-top {
+    position: relative;
+}
+body {
+    margin-top: 0px;
+}
+
+/*Alert Bar CSS End*/
+
+
+/*Toast  CSS Start*/
+
+#acn-controls-toasts {
+    display: none !important;
+    /*max-width: 22% !important;*/
+    /*margin-top: 75px !important*/
+}
+
+.acn-toast-link {
+    color: #FFA726 !important;
+}
+
+    .acn-toast-link:hover {
+        text-decoration: underline !important;
+    }
+
+.acn-toast-text {
+    color: #666 !important;
+    font-weight: normal !important;
+    font-family: Graphik Web !important;
+    font-size: 12px !important;
+}
+
+.acn-toast-item .acn-toast-ignore {
+    opacity: 1;
+}
+
+.acn-toast-item {
+    background-color: #fff !important;
+}
+
+    .acn-toast-item .acn-toast-link {
+        /*color: #0172a6 !important;*/
+        /*color:black !important;
+            text-decoration:none;*/
+    }
+
+/*Toast CSS End*/
+
+
+
+
+/*Modal CSS Start*/
+/*.popover.bottom .arrow {
+    left: 55% !important;
+}*/
+
+.acn-modal-body-arrow-left {
+    display: none !important;
+}
+
+.acn-modal-body-arrow-right {
+    display: none !important;
+}
+
+.acn-modal-pager-92529 {
+    display: none !important;
+}
+
+.acn-modal-large .acn-modal-content .acn-modal-body .acn-modal-slider .acn-modal-slide {
+    background-color: transparent !important;
+}
+
+    .acn-modal-large .acn-modal-content .acn-modal-body .acn-modal-slider .acn-modal-slide .acn-modal-slide-noimage {
+        background-color: #fff !important;
+        opacity: 1 !important;
+    }
+
+.acn-modal-large .acn-modal-content {
+    max-width: 700px !important;
+    height: 500px !important;
+}
+
+.acn-modal-slide-content-description {
+    overflow: visible !important;
+    font-family: 'Graphik Web' !important;
+    font-size: 15px !important;
+}
+
+.acn-modal-slide-content {
+    bottom: 55% !important;
+}
+
+.acn-modal-slide-content-title {
+    /*margin-bottom: 50px !important;*/
+    font-family: 'Graphik Bold' !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    color: #A91536 !important;
+    padding: 0;
+    border-bottom: 1px solid black !important;
+}
+
+[type="checkbox"].acn-modal-chk + label {
+    font-family: 'Graphik Web' !important;
+    font-weight: normal !important;
+}
+
+/*Modal CSS End*/

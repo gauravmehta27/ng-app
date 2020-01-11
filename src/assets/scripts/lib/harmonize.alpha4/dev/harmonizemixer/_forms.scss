@@ -1,0 +1,19 @@
+.form-group {
+    label {
+        margin:2rem 0 .5rem 0;
+        }
+}
+
+input[type="text"], input[type="email"], input[type="password"] , textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  
+  &:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+    }
+}
+ 

@@ -1,0 +1,215 @@
+
+<!--<link href="/assets/css/transIT-new-styles.css" rel="stylesheet" />
+<script src="assets/scripts/app-new.js"></script>-->
+
+<section ng-cloak ng-controller="dmatController" class="ng-scope home" style="height:100vh" >
+    <input id="isDealAvailable" type="hidden" value="Y" />
+    <div *ngIf="!ViewAllDealAccessInd; else elseBlock">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="home-head"><p class="heading-info">TransIT allows you to view, manage and track progress of your project - with timely approvals and appropriate interventions - all in one place</p></div>
+            </div>
+        </div>
+        <div class="content-wrapper-cards">
+
+            <div class="card-wrapper" *ngFor="let dataItem of projectList">
+                <div class="cards">
+                    <div class="card-content">
+                        <div class="card-front">
+                             <div>
+                                <div class="card-header">
+                                   
+                                    <div *ngIf="ProfileNm != 'Client'">
+                                        <a href="" class="card-id" ng-click="callMEC(dataItem)"> {{dataItem.Stage}}- {{dataItem.OpportunityId}}</a>
+                                    </div>
+                                    <h1 class="card-title oh" title="{{dataItem.DealName}}"><a href="" ng-click="callMEC(dataItem)"><span class="ellip Header-DealName-Casecapitalize" ng-click="callMEC(dataItem)">{{dataItem.DealName}}</span></a></h1>
+                                    <div class="more-info" ng-click="callMEC(dataItem)"><span class="cat">MEC:</span> {{dataItem.SatisfiedStatus}} | <span class="cat">Approved:</span> <span>{{dataItem.ApprovedCategoryCount}}</span> of <span>{{dataItem.TotalCategoryCount}}</span></div>
+                                </div>
+                                <div ng-click="callMEC(dataItem)">
+                                    <div class="status-grph">
+                                     
+                                        <canvas
+                                        baseChart
+                                        [chartType]="doughnutChartType"
+                                        [data]="dataItem.chartValue"
+                                        [labels]="doughnutChartLabels"
+                                        [options]="chartOptions"
+                                        [legend]="false"
+                                        [colors]="chartColors"
+                                        ></canvas>
+                                    
+                                        <div>
+                                            <div class="status-label">OVERALL STATUS</div>
+                                            <div class="status-value">{{dataItem.CompletionPct}}%</div>
+                                            <div class="status-text">Complete</div>
+                                        </div>
+                                    </div>
+                                    <div class="footer-content">
+                                        <div class="item">
+                                            <label>Offerings:</label>
+                                            <span class="ellip" title="{{dataItem.Offering}}">{{dataItem.Offering}}</span>
+                                        </div>
+                                        <div class="item">
+                                            <label>Created On:</label>
+                                            <span>{{dataItem.CreatedDate}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!--<p [appHighlight]="color">Highlight me!</p>-->
+                            <button type="button" class="flip" (click)="callflip($event)" flip-card aria-label="click to flip card"><div id ="flipbtn"  class="toBack transIcon-flip_off"></div></button>
+                        </div>
+                        <div class="card-back">
+                            <div>
+                                <div class="card-header" ng-click="callMEC(dataItem)">
+                                    <!--@if (Model.ProfileNm != "Client")
+                                    {-->
+                                    <div class="card-id">{{dataItem.Stage}} - {{dataItem.OpportunityId}}</div>
+                                    <!-- } -->
+                                    <h1 class="card-title oh" title="{{dataItem.DealName}}"> <span class="ellip">{{dataItem.DealName}}</span></h1>
+                                </div>
+                                <div class="detail-content">
+                                    <!--@if (Model.ProfileNm != "Client")
+                                    {-->
+                                    <p><span class="cat">CTV:</span> {{dataItem.CTVDeal}}</p>
+                                    <!--//}-->
+                                    <p class="oh"><span class="cat">Deal Type:</span><span class="ellip wd65" title="{{dataItem.DealType}}"> {{dataItem.DealType}}</span></p>
+                                    <p><span class="cat">Service Group:</span> {{dataItem.ServiceGroup}}</p>
+                                    <!--// @if (Model.ProfileNm != "Client")
+                                    //{-->
+                                    <p class="oh"><span class="cat">Governance Attention Level:</span><span class="ellip wd36" title="{{dataItem.GovernanceAttnLvl}}"> {{dataItem.GovernanceAttnLvl}}</span></p>
+                                    <p><span class="cat">High Risk Engagement(HRE):</span> {{dataItem.HRE}}</p>
+                                    <!--//}-->
+                                    <p class="oh"><span class="cat">Transition Lead:</span><span class="ellip wd65" title="{{dataItem.TransitionLead}}"> {{dataItem.TransitionLead}}</span></p>
+                                    <p><span class="cat">SPOA:</span> {{dataItem.GovernanceLead}}</p>
+                                    <p><span class="cat">Delivery Account Lead:</span> {{dataItem.ClientAccountLead}}</p>
+                                    <p><span class="cat">Service Delivery Lead:</span> {{dataItem.ServiceDeliveryLead}}</p>
+                                    <p><span class="cat">Prime MD:</span> {{dataItem.PrimeDeliveryLead}}</p>
+                                    <p><span class="cat">Start Date of Transition:</span> {{dataItem.TransitionStartDate}}</p>
+                                    <p><span class="cat">End Date of Transition:</span> {{dataItem.TransitionEndDate}}</p>
+                                    <p><span class="cat">Next Planned Go Live:</span> {{dataItem.PlannedGoliveDate}}</p>
+                                </div>
+                            </div>
+                            <button type="button" class="flip" (click)="callflip($event)" flip-card aria-label="click to flip card"><span id ="flipbtn" class="transIcon-flip_off"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <ng-template #elseBlock>
+        <div id="textdiv" class="row">
+            <div class="col-sm-12">
+                <div class="home-head"><p class="heading-info">TransIT allows you to view, manage and track progress of your project - with timely approvals and appropriate interventions - all in one place</p></div>
+            </div>
+        </div>
+        <div class="row" style="padding-top:30px">
+            <div class="col-sm-12">
+                <div class="search-row" >
+                    <span class="transIcon-search magnification"></span>
+                    <!-- <input id="Search" (click)="handleSearch(' ')"   class="form-control" kendo-auto-complete k-options="DealOptions" k-on-select="RefreshData(kendoEvent)" /> -->
+                    <kendo-autocomplete id="Search" (click)="handleSearch(' ')" class="form-control" [data]="finalData" [filterable]="true" (filterchange)="handleFilter($event)" (valuechange)="refreshData($event)">
+                    </kendo-autocomplete> 
+                    <!-- <div>
+                        <button type="button" (click)="RefreshData('Project Ivory')">Get Projects</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper-cards" style="margin-top:100px">
+
+
+            <div class="card-wrapper" *ngFor="let dataItem of projList">
+                <div class="cards">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <div>
+                                <div class="card-header">
+                                    <a href="" class="card-id" ng-click="callMEC(dataItem)"> {{dataItem.Stage}}- {{dataItem.OpportunityId}}</a>
+                                    <h1 class="card-title oh" title="{{dataItem.DealName}}"><a href="" ng-click="callMEC(dataItem)"><span class="ellip Header-DealName-Casecapitalize" ng-click="callMEC(dataItem)">{{dataItem.DealName}}</span></a></h1>
+                                    <div class="more-info" ng-click="callMEC(dataItem)"><span class="cat">MEC:</span> {{dataItem.SatisfiedStatus}} | <span class="cat">Approved:</span> <span>{{dataItem.ApprovedCategoryCount}}</span> of <span>{{dataItem.TotalCategoryCount}}</span></div>
+                                </div>
+                                <div ng-click="callMEC(dataItem)">
+                                    <div class="status-grph">
+                                        <canvas baseChart                                        
+                                        [data]="dataItem.chartValue"
+                                        [labels]="doughnutChartLabels"
+                                        [chartType]="doughnutChartType"
+                                        [colors]="chartColors"
+                                        [legend]="false"
+                                        [options]="chartOptions">                                   
+                                       
+                                      </canvas>
+                                        <div>
+                                            <div class="status-label">OVERALL STATUS</div>
+                                            <div class="status-value" >{{dataItem.CompletionPct}}%</div>
+                                            <div class="status-text">Complete</div>
+                                        </div>
+                                    </div>
+                                    <div class="footer-content">
+                                        <div class="item">
+                                            <label>Offerings:</label>
+                                            <span class="ellip" title="{{dataItem.Offering}}">{{dataItem.Offering}}</span>
+                                        </div>
+                                        <div class="item">
+                                            <label>Created On:</label>
+                                            <span>{{dataItem.CreatedDate}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="flip" (click)="callflip($event)" flip-card aria-label="click to flip card"><span id ="flipbtn"  class="toBack transIcon-flip_off"></span></button>
+                        </div>
+                        <div class="card-back">
+                            <div>
+                                <div class="card-header" ng-click="callMEC(dataItem)">
+                                    <div class="card-id">{{dataItem.Stage}} - {{dataItem.OpportunityId}}</div>
+                                    <h1 class="card-title oh" title="{{dataItem.DealName}}"> <span class="ellip Header-DealName-Casecapitalize">{{dataItem.DealName}}</span></h1>
+                                </div>
+                                <div class="detail-content">
+                                    <p><span class="cat">CTV:</span> {{dataItem.CTVDeal}}</p>
+                                    <p class="oh"><span class="cat">Deal Type:</span><span class="ellip wd65" title="{{dataItem.DealType}}"> {{dataItem.DealType}}</span></p>
+                                    <p><span class="cat">Service Group:</span> {{dataItem.ServiceGroup}}</p>
+                                    <p class="oh"><span class="cat">Governance Attention Level:</span><span class="ellip wd36" title="{{dataItem.GovernanceAttnLvl}}"> {{dataItem.GovernanceAttnLvl}}</span></p>
+                                    <p><span class="cat">High Risk Engagement(HRE):</span> {{dataItem.HRE}}</p>
+                                    <p class="oh"><span class="cat">Transition Lead:</span><span class="ellip wd65" title="{{dataItem.TransitionLead}}"> {{dataItem.TransitionLead}}</span></p>
+                                    <p><span class="cat">SPOA:</span> {{dataItem.GovernanceLead}}</p>
+                                    <p><span class="cat">Delivery Account Lead:</span> {{dataItem.ClientAccountLead}}</p>
+                                    <p><span class="cat">Service Delivery Lead:</span> {{dataItem.ServiceDeliveryLead}}</p>
+                                    <p><span class="cat">Prime MD:</span> {{dataItem.PrimeDeliveryLead}}</p>
+                                    <p><span class="cat">Transition Start Date:</span> {{dataItem.TransitionStartDate}}</p>
+                                    <p><span class="cat">Transition End Date:</span> {{dataItem.TransitionEndDate}}</p>
+                                    <p><span class="cat">Next Planned Go Live:</span> {{dataItem.PlannedGoliveDate}}</p>
+                                </div>
+                            </div>
+                            <button type="button" class="flip" (click)="callflip($event)" flip-card aria-label="click to flip card"><span id ="flipbtn"  class="transIcon-flip_off"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ng-template>
+    <input id="hidViewAll" type="hidden" value="True" />
+
+</section>
+
+
+
+<!--<script src="~/Scripts/d3.js"></script>
+
+<script src="~/Scripts/DMAT/DMATHome.js?v=@Session[" Version"]"></script>
+<script src="~/Scripts/FeedBack/FeedBackController_moflow.js"></script>-->
+<style>
+    donut-chart {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+
+    text {
+        font: 12px sans-serif;
+    }
+</style>

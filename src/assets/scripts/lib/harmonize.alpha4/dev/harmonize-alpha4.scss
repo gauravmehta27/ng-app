@@ -1,0 +1,15 @@
+/* 
+
+    UI Harmonize Stylesheet 
+    It is compbined with Bootstrap and should be used for Responsive Web only.
+    For mobile go for HarmonizeCore.scss
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900,200,100);
+
+@import "adapter-bootstrap";
+@import "adapter-material";
+@import "adapter-harmonize";
+
+//Provider the Tile you want here   
+

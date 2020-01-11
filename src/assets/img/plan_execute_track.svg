@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2392 103.968 566 250">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #00baff;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-size: 48px;
+        font-family: Graphik-Black, Graphik;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="0.822" x2="1" y2="0.178" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00baff"/>
+      <stop offset="0.137" stop-color="#04a8ff"/>
+      <stop offset="0.412" stop-color="#0e77ff"/>
+      <stop offset="0.798" stop-color="#1f2bff"/>
+      <stop offset="1" stop-color="#2800ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_655" data-name="Group 655" transform="translate(-2749)">
+    <g id="ACC_Operations_GT_Dimensional_RGB_pos" transform="translate(519 103.968)">
+      <path id="Path_840" data-name="Path 840" class="cls-1" d="M541.546,235.5,300,333.326v54.348l241.546-97.826Z" transform="translate(-300 -137.674)"/>
+      <path id="Path_841" data-name="Path 841" class="cls-2" d="M541.546,371.474,300,273.648V219.3l241.546,97.826Z" transform="translate(-300 -219.3)"/>
+    </g>
+    <text id="PLAN._EXECUTE._TRACK" data-name="PLAN. EXECUTE. TRACK" class="cls-3" transform="translate(357 276)"><tspan x="0" y="0">PLAN. EXECUTE. TRACK</tspan></text>
+  </g>
+</svg>

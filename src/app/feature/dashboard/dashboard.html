@@ -1,0 +1,30 @@
+﻿<div style="margin:10px 0px 0px 30px;">
+        <br/>
+        <h1>{{message}}</h1>
+        <p>{{sampleData | json}}</p>
+
+        <h1>{{message}}</h1>
+        <br>
+        <p>{{sampleData2 | json}}</p>
+        
+         <table class="table table-striped">
+            <thead class="thead-inverse">
+              <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of sampleData">
+                <td>{{item.id}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.location}}</td>
+              </tr>              
+            </tbody>
+          </table> 
+    </div>

@@ -1,0 +1,59 @@
+@mixin timeTravel($span) {
+    -webkit-transition: all $span ease;
+    -moz-transition: all $span ease;
+    -o-transition:  all $span ease;
+    transition: all $span ease;
+}
+
+@mixin quickTimeTravel($span, $property) {
+    -webkit-transition: $property $span ease;
+    -moz-transition: $property $span ease;
+    -o-transition:  $property $span ease;
+    transition: $property $span ease;
+}
+
+@mixin SkewMe($degree) {
+    -ms-transform: skew(0, $degree); 
+    -webkit-transform: skew(0, $degree); 
+    transform: skew(0, $degree); 
+}
+
+@mixin rotate($deg) {
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg); 
+    transform: rotate($deg);
+}
+
+@mixin addShadow($x, $y, $blur, $spread, $color) {
+    -webkit-box-shadow: $x $y $blur $spread $color;
+    -moz-box-shadow: $x $y $blur $spread $color;
+    box-shadow: $x $y $blur $spread $color;   
+}
+
+@mixin textShadow($x, $y, $blur, $color) {
+    text-shadow: $x $y $blur $color;   
+}
+
+
+@mixin horizGradient($color-start, $color-stop, $position-start, $position-end) {
+    background: $color-start;
+    background: -moz-linear-gradient(left, $color-start $position-start, $color-start $position-start, $color-stop $position-stop, $color-stop $position-stop);
+    background: -webkit-gradient(left top, right top, color-stop($position-start, $color-start), color-stop($position-start, $color-start), color-stop($position-stop, $color-stop), color-stop($position-stop, $color-stop));
+    background: -webkit-linear-gradient(left, $color-start $position-start, $color-start $position-start, $color-stop $position-stop, $color-stop $position-stop);
+    background: -o-linear-gradient(left, $color-start $position-start, $color-start $position-start, $color-stop $position-stop, $color-stop $position-stop);
+    background: -ms-linear-gradient(left, $color-start $position-start, $color-start $position-start, $color-stop  $position-stop, $color-stop  $position-stop);
+    background: linear-gradient(to right, $color-start $position-start, $color-start $position-start, $color-stop  $position-stop, $color-stop  $position-stop);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+}
+
+@mixin vertGradient($color-start, $color-stop, $position-start, $position-end) {
+    background: $color-start;
+    background: -moz-linear-gradient(top, $color-start $position-start, $color-start $position-start, $color-stop $position-stop, $color-stop $position-stop);
+    background: -webkit-gradient(left top, left bottom, color-stop($position-start, $color-start), color-stop($position-start, $color-start), color-stop($position-stop, $color-stop), color-stop($position-stop, $color-stop));
+    background: -webkit-linear-gradient(top, $color-start $position-start, $color-start $position-start, $color-stop $position-stop, $color-stop $position-stop);
+    background: -o-linear-gradient(top, $color-start $position-start, $color-start $position-start, $color-stop $position-stop, $color-stop $position-stop);
+    background: -ms-linear-gradient(top, $color-start $position-start, $color-start $position-start, $color-stop  $position-stop, $color-stop  $position-stop);
+    background: linear-gradient(to bottom, $color-start $position-start, $color-start $position-start, $color-stop  $position-stop, $color-stop  $position-stop);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+}
+

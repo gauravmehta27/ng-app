@@ -1,0 +1,113 @@
+<!-- <div class="panelbar-wrapper">
+  <kendo-panelbar>
+    <kendo-panelbar-item [title]="'DEAL REPORTING INFORMATION'" expanded="true"> -->
+<div class="panel-bar panel-alt">
+  <!-- <span>
+    DEAL REPORTING INFORMATION
+  </span> -->
+  <div class="otherDealInformation">
+    <div class="row">
+      <div class="deal-information-wrapper">
+        <div style="color:red"></div>
+        <div class="form-group deal-setup">
+          <label>Customer ID</label>
+          <!-- @Html.TextBoxFor(model => model.DealReportInformation.CustomerID, new { @class = "form-control", @readonly = "readonly" }) -->
+          <input
+            type="text"
+            class="form-control"
+            id="CustomerID"
+            ng-model="DealReportInformation.CustomerID"
+            readonly="true"
+          />
+        </div>
+        <div class="form-group deal-setup">
+          <label>Global Customer Name</label>
+          <!-- @Html.TextBoxFor(model => model.DealReportInformation.GlobalCustomerName, new { @class = "form-control", @maxlength = "50" }) -->
+          <input
+            type="text"
+            class="form-control"
+            id="GlobalCustomerName"
+            ng-model="DealReportInformation.GlobalCustomerName"
+            readonly="true"
+            maxlength="50"
+          />
+        </div>
+        <div class="form-group deal-setup">
+          <label>CTV deal</label>
+          <!-- @if (Model.DealReportInformation.DealReportInfoEditable)
+                    {
+                        @Html.HiddenFor(model => model.DealReportInformation.CTVDeal)
+                        <select id="CTVDeal_" kendo-drop-down-list k-data-source='yesnoOptions'
+                                k-data-text-field="'text'" k-value-primitive="true" k-data-value-field="'value'" style="width:100%" k-ng-model="'@Model.DealReportInformation.CTVDeal'" k-change="DEALSTATUS_onchange"></select>
+                    }
+                    else
+                    {
+                        @Html.TextBoxFor(model => model.DealReportInformation.CTVDeal, new { @class = "form-control", @readonly = "readonly" })
+                    } -->
+        </div>
+        <div class="form-group deal-setup">
+          <label>Deal Exclusion</label>
+          <!-- @if (Model.DealReportInformation.DealReportInfoEditable)
+                    {
+                        @Html.HiddenFor(model => model.DealReportInformation.DealExclusion)
+                        <select id="DealExclusion_" kendo-drop-down-list k-data-source='yesnoOptions'
+                                k-data-text-field="'text'" k-value-primitive="true" k-data-value-field="'value'" style="width:100%" k-ng-model="'@Model.DealReportInformation.DealExclusion'" k-change="DEALSTATUS_onchange"></select>
+                    }
+                    else
+                    {
+                        @Html.TextBoxFor(model => model.DealReportInformation.DealExclusion, new { @class = "form-control", @readonly = "readonly" })
+                    } -->
+        </div>
+        <div class="form-group deal-setup">
+          <label>Deal Saving ($)</label>
+          <!-- @if (Model.DealReportInformation.DealReportInfoEditable)
+                    {
+                        @Html.TextBoxFor(model => model.DealReportInformation.DealSaving, new { @class = "form-control", dirtyonchange = "" })
+                    }
+                    else
+                    {
+                        @Html.TextBoxFor(model => model.DealReportInformation.DealSaving, new { @class = "form-control", @readonly = "readonly" })
+                    } -->
+        </div>
+        <div class="form-group deal-setup">
+          <label>Deal Saving Approved Date</label>
+          <!-- @if (Model.DealReportInformation.DealReportInfoEditable)
+                    {
+                        @Html.HiddenFor(model => model.DealReportInformation.DealSavingApprovedDate)
+                        <input id="DealSavingApprovedDate_" kendo-date-picker k-format='dateFormat' style="width:100%" k-ng-model="'@Model.DealReportInformation.DealSavingApprovedDate'" k-change="LOI_onChange" />
+                    }
+                    else
+                    {
+                        @Html.TextBoxFor(model => model.DealReportInformation.DealSavingApprovedDate, new { @class = "form-control", @readonly = "readonly" })
+                    } -->
+        </div>
+        <div class="form-group deal-setup">
+          <label>Deal Creation Date</label>
+          <!-- @Html.TextBoxFor(model => model.DealReportInformation.DealCreationDate, new { @class = "form-control", @readonly = "readonly" }) -->
+          <input
+            type="text"
+            class="form-control"
+            id="DealCreationDate"
+            ng-model="DealReportInformation.DealCreationDate"
+            readonly="true"
+          />
+        </div>
+        <div class="form-group deal-setup">
+          <label>SPOA_Reporting</label>
+          <!-- @Html.TextBoxFor(model => model.DealInformation.SingleAccountabilityTransitionLead, new { @class = "form-control", @maxlength = "100", dirtyonchange = "", }) -->
+          <input
+            type="text"
+            class="form-control"
+            id="SingleAccountabilityTransitionLead"
+            ng-model="DealReportInformation.SingleAccountabilityTransitionLead"
+            readonly="true"
+            maxlength="100"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </kendo-panelbar-item>
+  </kendo-panelbar>
+</div> -->
+</div>

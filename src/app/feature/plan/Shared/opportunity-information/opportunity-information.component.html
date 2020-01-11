@@ -1,0 +1,2540 @@
+<h2 class="title">Opportunity Information</h2>
+<div class="row">
+  <div class="deal-information-wrapper-opportunity">
+    <div class="form-group deal-setup">
+      <label>Opportunity Primary Key</label>
+      <!-- @Html.TextBoxFor(model => model.OpportunityInformation.OPPORTUNITYID, new { @class = "form-control", @readonly = "readonly" }) -->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="OpportunityInformation.OPPORTUNITYID"
+        readonly="true"
+      />
+    </div>
+    <div class="form-group deal-setup">
+      <label>Geo Unit</label>
+      <!-- @Html.TextBoxFor(model => model.OpportunityInformation.GEOUNITNM, new { @class = "form-control", @readonly = "readonly" }) -->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="OpportunityInformation.GEOUNITNM"
+        readonly="true"
+      />
+    </div>
+    <div class="form-group deal-setup">
+      <label>Operating Unit</label>
+      <!-- @Html.TextBoxFor(model => model.OpportunityInformation.OperatingUnit, new { @class = "form-control", @readonly = "readonly" }) -->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="OpportunityInformation.OperatingUnit"
+        readonly="true"
+      />
+    </div>
+    <div class="form-group deal-setup">
+      <label>Risk Level</label>
+      <!-- @Html.TextBoxFor(model => model.OpportunityInformation.RISKLEVEL, new { @class = "form-control", @readonly = "readonly" }) -->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="OpportunityInformation.RISKLEVEL"
+        readonly="true"
+      />
+    </div>
+    <div class="form-group deal-setup">
+      <label>Link to One Note</label>
+      <!-- @Html.TextBoxFor(model => model.OpportunityInformation.ONENOTEURL, new { @class = "form-control", @readonly = "readonly" }) -->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="OpportunityInformation.ONENOTEURL"
+        readonly="true"
+      />
+    </div>
+    <div class="form-group deal-setup">
+      <label>Created by (Name, Date, Time)</label>
+      <!-- @Html.TextBoxFor(model => model.OpportunityInformation.CREATEDBY, new { @class = "form-control", @readonly = "readonly" }) -->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="OpportunityInformation.CREATEDBY"
+        readonly="true"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- MMS Details -->
+<h2 class="title">Opportunity Summary (MMS)</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Client</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.CLIENTNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.CLIENTNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>CR Name</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.CRNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.CRNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Opportunity</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.OPPORTUNITYNAME, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.OPPORTUNITYNAME"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Stage</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.STAGENM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.STAGENM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Geo Region</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.GEOREGIONNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.STAGENM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Probability (%)</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.DEALPROBABILITYPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.DEALPROBABILITYPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Geo Unit</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.GEOUNITNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.GEOUNITNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>ECSD Quarter</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.ECSDQUARTERNBR, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.ECSDQUARTERNBR"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Operating Group</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.OGNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.OGNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Competitor</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.COMPETITORNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.COMPETITORNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Operating Unit</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.OUNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.OUNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Mergers & Acquisitions</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.MERGERSDESC, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.MERGERSDESC"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Parent Opportunity</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.PARENTOPPORTUNITYNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.PARENTOPPORTUNITYNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Master Client Class</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.MASTERCILENTCLASSNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.MASTERCILENTCLASSNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>CSG</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.CSGNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.CSGNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Sub-CSG</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.SUBCSGNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.SUBCSGNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Industry Business Services</label>
+            <!-- @Html.TextAreaFor(model => model.MMSDetails.IndustryServicesTxt, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.IndustryServicesTxt"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Opportunity Class</label>
+            <!-- @Html.TextAreaFor(model => model.MMSDetails.OPPORTUNITYCLASSNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.OPPORTUNITYCLASSNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Industry Segment</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.INDUSTRYSEGMENTDESC, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.INDUSTRYSEGMENTDESC"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Win Probability Index (WPI) </label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.WPINBR, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.WPINBR"
+            readonly="true"
+          />
+          </div>
+
+        <div class="form-group deal-setup">
+            <label>WPI as of Date</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.WPIDT, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.MMSDetails.WPIDT == null ? "" : Model.MMSDetails.WPIDT.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="MMSDetails.WPIDT"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Link to MMS</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.LINKTOMMS, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.LINKTOMMS"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Maturity Index Check</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.MaturityIndexCheck, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.MaturityIndexCheck"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Operations Account Lead</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.OperationsAccLead, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.OperationsAccLead"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Contract Extension Flag</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.ContractExtensionFlag, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.ContractExtensionFlag"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Competitive / Sole Sourced</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.COMPETITIVEDESC, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.COMPETITIVEDESC"
+            readonly="true"
+          />
+          </div>
+
+        <div class="form-group deal-setup">
+            <label>Deal in Mobilization Workbench</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.DealMobWorkbench, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.DealMobWorkbench"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>SL(Reporting)</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.SLReporting, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.SLReporting"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Default Responsible Business Entity</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.DefRespBusEntity, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.DefRespBusEntity"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Responsible Business Entity Override</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.RespBusEntity, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.RespBusEntity"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Mobilization Architect</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.MobArchitect, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.MobArchitect"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Is Avanade Opportunity</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.ISAVANADEOPPORTUNITY, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.ISAVANADEOPPORTUNITY"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Restricted</label>
+            <!-- @Html.TextBoxFor(model => model.MMSDetails.ISRESTRICTED, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="MMSDetails.ISRESTRICTED"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _SGFinancial -->
+<h2 class="title">Opportunity Financials (MMS)</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Total Current Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.TOTALCURRENTNETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.TOTALCURRENTNETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Business Process Outsourcing (BPO) %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.BPOPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.BPOPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>AO Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.AONETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.AONETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>BPO Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.BPONETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.BPONETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>CON - IC Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.ICNETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.ICNETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.IONETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.IONETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Application Outsourcing (AO) %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.AOPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.AOPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>MC Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.MCNETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.MCNETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Management Consulting (MC) %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.MCPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.MCPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>SI Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.SINETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.SINETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Systems Integration (SI) %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.SIPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.SIPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>SC Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.SCNETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.SCNETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Strategy Consulting (SC) %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.SCPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.SCPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>TC Net Revenue (In '000s)($)</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.TCNETREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.TCNETREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Infrastructure Outsourcing (IO) %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.IOPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.IOPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>CON - IC %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.ICPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.ICPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Technology Consulting (TC) %</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.TCPCT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.TCPCT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Pricing Structure</label>
+            <!-- @Html.TextBoxFor(model => model.SGFinancial.PRICINGSTRUCTURE, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SGFinancial.PRICINGSTRUCTURE"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _SWBBPO -->
+
+<h2 class="title">BPO Details</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>BPO Net Revenue (Thousands)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.SWBBPOREVENUEAMT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.SWBBPOREVENUEAMT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Lead Solution Architect - BPO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.LSABPONM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.LSABPONM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Last Modified Date</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.SWBBPOLASTMODIFIEDDT, new
+               {
+                   @class = "form-control",
+                   @Value = (Model.SWBBPO.SWBBPOLASTMODIFIEDDT == null ? "" : Model.SWBBPO.SWBBPOLASTMODIFIEDDT.Value.ToShortDateString()),
+                   @readonly = "readonly"
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="SWBBPO.SWBBPOLASTMODIFIEDDT"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Offerings BPO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.OFFERINGSBPONM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.OFFERINGSBPONM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Delivery Locations (BPO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.BPODELIVERYLOCATIONSNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.BPODELIVERYLOCATIONSNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Capacity Service in Scope</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.CAPABILITYINSCOPEIND, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.CAPABILITYINSCOPEIND"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Flywheel/Non Flywheel</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.FLYWHEELIND, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.FLYWHEELIND"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Primary BPO Offering Name</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.PRIMARYBPOOFFERINGNM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.PRIMARYBPOOFFERINGNM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>SD Covered BPO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.SDCOVEREDBPOIND, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.SDCOVEREDBPOIND"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Reason for Not SD Covered (BPO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.BPOSDNOTCOVEREDREASONDESC, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.BPOSDNOTCOVEREDREASONDESC"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Accenture Non BPO Scope</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.NONBPOSCOPEIND, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.NONBPOSCOPEIND"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>BPO Onshore FTE</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.BPOONSHOREFTE, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.BPOONSHOREFTE"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Prime Delivery Lead - BPO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.PRIMEDELIVERYLEADBPO, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.PRIMEDELIVERYLEADBPO"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>No Capability Lead Involvement</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.NOCAPABILITYLEADINVOLVEMENT, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.NOCAPABILITYLEADINVOLVEMENT"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>BPO Offshore FTE</label>
+            <!-- @Html.TextBoxFor(model => model.SWBBPO.BPOOFFSHOREFTE, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBBPO.BPOOFFSHOREFTE"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+
+<!-- _SWBIO -->
+<h2 class="title">IO Details</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>IO Net Revenue (Thousands)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.SWBIORevenueAmt, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.SWBIORevenueAmt"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Lead Solution Architect - IO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.LSAIONm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.LSAIONm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Reporting Status</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOReportingStatus, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOReportingStatus"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Offerings IO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.OfferingsIONm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.OfferingsIONm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Last Modified Date</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.SWBIOLastModifiedDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.SWBIO.LastModifiedDate == null ? "" : Model.SWBIO.LastModifiedDate.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="SWBIO.SWBIOLastModifiedDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Delivery Locations (IO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IODeliveryLocationsNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IODeliveryLocationsNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>SD Covered IO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.SDCoveredIOInd, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.SDCoveredIOInd"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Reason for Not SD Covered (IO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOSDNotCoveredReasonDesc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOSDNotCoveredReasonDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Pre-qualification Assessment</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOPreQualificationAssessment, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOPreQualificationAssessment"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Exception Approval Required</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOExceptionApprovalRequired, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOExceptionApprovalRequired"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Comments for RYG (IO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOCommentsForRYG, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOCommentsForRYG"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Rate Card Document (IO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IORateCardDoc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IORateCardDoc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Qualification Score</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOQualificationScore, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOQualificationScore"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Rationale for IO Exception Approval</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IORationaleExcApproval, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IORationaleExcApproval"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Score Color</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.ScoreColor, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.ScoreColor"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Onshore FTE</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOOnshoreFTE, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOOnshoreFTE"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Prime Delivery Lead - IO</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOPrimeDeliveryLead, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOPrimeDeliveryLead"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>FTE Offshore (IO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOFTEOffshore, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOFTEOffshore"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Response</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOResponse, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOResponse"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>FTE Onshore (IO)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.FTEOnshoreIO, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.FTEOnshoreIO"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>CPR Comments</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.CPRComments, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.CPRComments"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IO Offshore FTE</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIO.IOOffshoreFTE, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIO.IOOffshoreFTE"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _SWBIC -->
+<h2 class="title">CON - IC Details</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>CON - IC Net Revenue (Thousands)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.SWBICRevenueAmt, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.SWBICRevenueAmt"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Lead Solution Architect - CON - IC</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.LSAICNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.LSAICNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Last Modified Date</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.SWBICLastModifiedDt, new
+                   {
+                       @class = "form-control",
+                       @readonly = "readonly",
+                       @Value = (Model.SWBIC.SWBICLastModifiedDt == null ? "" : Model.SWBIC.SWBICLastModifiedDt.Value.ToShortDateString())
+                   }) -->
+                   <input
+                   type="text"
+                   class="form-control"
+                   [(ngModel)]="SWBIC.SWBICLastModifiedDt"
+                   readonly="true"
+                 />
+                  </div>
+        <div class="form-group deal-setup">
+            <label>SD Covered CON - IC</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.SDCoveredICInd, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.SDCoveredICInd"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Offerings CON - IC</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.OfferingsICNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.OfferingsICNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Reason for Not SD Covered (CON - IC)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.ICSDNotCoveredReasonDesc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.ICSDNotCoveredReasonDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Delivery Locations (CON - IC)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.ICDeliveryLocationsNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.ICDeliveryLocationsNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Capabilities (CON - IC)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.ICCapabilities, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.ICCapabilities"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>FTE Offshore (CON - IC)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.FTEOffshoreIC, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.FTEOffshoreIC"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>FTE Onshore (CON - IC)</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.FTEOnshoreIC, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.FTEOnshoreIC"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Prime Delivery Lead - CON - IC</label>
+            <!-- @Html.TextBoxFor(model => model.SWBIC.ICPrimaryLead, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="SWBIC.ICPrimaryLead"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _CrossSGDetails -->
+<h2 class="title">Cross SG Details</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>CapCo Opportunity</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.CapCoOpp, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.CapCoOpp"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Date on Agenda</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.DateOnAgenda, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.crossGSDetails.DateOnAgenda == null ? "" : Model.crossGSDetails.DateOnAgenda.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="crossGSDetails.DateOnAgenda"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Calculated Risk Tier</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.CalRiskTier, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.CalRiskTier"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>On Hold?</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.OnHold, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.OnHold"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Active</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.Active, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.Active"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Business Continuity Plan</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.BCP, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.BCP"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>IsBillionDollarOpportunity</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.IsBillionDollarOpportunity, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.IsBillionDollarOpportunity"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>As-A-Service Opportunity</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.AsAService, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.AsAService"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>RPA as a Service In Scope</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.RPAAsAService, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.RPAAsAService"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Refuse to Lose</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.RefusetoLose, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.RefusetoLose"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Artificial Intelligence</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.ArtificialIntelligence, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.ArtificialIntelligence"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Is Accenture Internal Opportunity</label>
+            <!-- @Html.TextBoxFor(model => model.crossGSDetails.IsAccIntOpp, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="crossGSDetails.IsAccIntOpp"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _KeepInViewSolutionWatchDetails -->
+<h2 class="title">Keep in View and Solution Watchlist Details</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>KIV Included</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.KIVIncluded, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.KIVIncluded"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>TCV</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.TCV_KIV, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.TCV_KIV"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>CapCo</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.Capco, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.Capco"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>High Risk Solution</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.HighRiskSol, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.HighRiskSol"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Qualification “Lights” / Questions</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.QualLightsQuestions, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.QualLightsQuestions"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Other</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.OtherKIV, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.OtherKIV"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Other Reason</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.OtherReason, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.OtherReason"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Attention Points</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.AttnPoints, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.AttnPoints"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Attention Points History</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.AttnPointsHistory, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.AttnPointsHistory"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Attention Point Last Updated On</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.AttnPtLastUpdatedDttm, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.solutionDetails.AttnPtLastUpdatedDttm == null ? "" : Model.solutionDetails.AttnPtLastUpdatedDttm.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="solutionDetails.AttnPtLastUpdatedDttm"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Status Update</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.StatusUpdate, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.StatusUpdate"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Status Update History</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.StatusUpdateHistory, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.StatusUpdateHistory"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Status Last updated on</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.StatusLastupdatedon, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.solutionDetails.StatusLastupdatedon == null ? "" : Model.solutionDetails.StatusLastupdatedon.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="solutionDetails.StatusLastupdatedon"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Watchlist Included</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.WatchlistIncluded, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.WatchlistIncluded"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>High Risk as defined by QAD</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.HighRiskQAD, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.HighRiskQAD"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>High Dependencies</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.HighDependencies, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.HighDependencies"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>High People Impact</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.HighPeopleImpact, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.HighPeopleImpact"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>New Offering/Capability/Non-Std Solution</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.NOCNonStdSolution, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.NOCNonStdSolution"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>New or Non-Standard location</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.NewNonStanlocation, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.NewNonStanlocation"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Complex Mobilization</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.ComplexMobilization, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.ComplexMobilization"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Limited or No Baseline Available</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.LiBaselineAvailable, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.LiBaselineAvailable"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>No Pre-Contract Due Diligence</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.NoPreContDueDiligence, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.NoPreContDueDiligence"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Transformation Prior To Go Live</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.TransPriorGoLive, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.TransPriorGoLive"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>New Technology / Tools</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.NewTechnologyTools, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.NewTechnologyTools"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>New and/or Immature Client</label>
+            <!-- @Html.TextBoxFor(model => model.solutionDetails.NewImmatureClient, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="solutionDetails.NewImmatureClient"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _RotatingNewSolutionStack -->
+<h2 class="title">Rotating to the New – Solution Stack</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Business Process</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.BusinessProcessNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.BusinessProcessNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Platform & Applications</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.PlatformAppsNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.PlatformAppsNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Cloud</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.CloudNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.CloudNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Security</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.SecurityServicesNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.SecurityServicesNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Analytics</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.AnalyticsInScopeInd, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.AnalyticsInScopeInd"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Industry Differentiation</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.IndustryDiff, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.IndustryDiff"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Business Process Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.BusProcMatIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.BusProcMatIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Platform & Applications Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.PlfmApplMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.PlfmApplMaturityIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Cloud Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.CldMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.CldMaturityIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Security Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.SecMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.SecMaturityIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Analytics Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.AnalyticsMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.AnalyticsMaturityIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Industry Differentiation Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionStack.IndDiffMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionStack.IndDiffMaturityIndex"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _RotatingNewCommercialFinancial -->
+<h2 class="title">Rotating to the New – Commercial & Financial</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Deal Shape</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewCommercialFinancial.DealShape, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewCommercialFinancial.DealShape"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Pricing Model</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewCommercialFinancial.Pricingmodel, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewCommercialFinancial.Pricingmodel"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Deal Shape Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewCommercialFinancial.DealShapeMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewCommercialFinancial.DealShapeMaturityIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Pricing Model Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewCommercialFinancial.PricingModelMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewCommercialFinancial.PricingModelMaturityIndex"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _RotatingToTheNewDelivery -->
+<h2 class="title">Rotating to the New – Delivery</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Automation</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewDelivery.Automation, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewDelivery.Automation"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Liquid</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewDelivery.Liquid, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewDelivery.Liquid"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Automation Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewDelivery.AutomationMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewDelivery.AutomationMaturityIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Liquid Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingNewDelivery.LiquidMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingNewDelivery.LiquidMaturityIndex"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _RotatingToTheNewSolutionMaturityIndex -->
+<h2 class="title">Rotating to the New – Solution Maturity Index</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Overall Maturity Index</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionMaturityIndex.OverallMaturityIndex, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionMaturityIndex.OverallMaturityIndex"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Maturity Index Attributes</label>
+            <!-- @Html.TextBoxFor(model => model.rotatingSolutionMaturityIndex.MaturityIndexAttributes, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="rotatingSolutionMaturityIndex.MaturityIndexAttributes"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _OpportunityTimeline -->
+<h2 class="title">Opportunity Timeline</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Create Date (MMS)</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.MMSCreateDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.MMSCreateDt == null ? "" : Model.OpportunityTimeline.MMSCreateDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.MMSCreateDt"
+               readonly="true"
+              
+
+             />
+             <!-- [Value]="(Model.OpportunityTimeline.MMSCreateDt == null ? '' : Model.OpportunityTimeline.MMSCreateDt.Value.ToShortDateString())" -->
+              </div>
+        <div class="form-group deal-setup">
+            <label>Stage Update Date(MMS)</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.MMSUpdateDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.MMSUpdateDt == null ? "" : Model.OpportunityTimeline.MMSUpdateDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.MMSUpdateDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Pipeline Entry Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.PipelineEntryDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.PipelineEntryDt == null ? "" : Model.OpportunityTimeline.PipelineEntryDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.PipelineEntryDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Reference Checks and Site Visits Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.SiteVisitDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.SiteVisitDt == null ? "" : Model.OpportunityTimeline.SiteVisitDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.SiteVisitDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Solution Start Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.SolutionStartDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.SolutionStartDt == null ? "" : Model.OpportunityTimeline.SolutionStartDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.SolutionStartDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Negotiations Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.NagotiationsDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.NagotiationsDt == null ? "" : Model.OpportunityTimeline.NagotiationsDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.NagotiationsDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>RFI Received Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.RFIReceivedDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.RFIReceivedDt == null ? "" : Model.OpportunityTimeline.RFIReceivedDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.RFIReceivedDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Stage 3 Submit Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.Stage3SubmitDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.Stage3SubmitDt == null ? "" : Model.OpportunityTimeline.Stage3SubmitDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.Stage3SubmitDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Stage 1 Submit Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.Stage1SubmitDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.Stage1SubmitDt == null ? "" : Model.OpportunityTimeline.Stage1SubmitDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.Stage1SubmitDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Proposal Submission Date(MMS)</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.ProposalSubmitDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.ProposalSubmitDt == null ? "" : Model.OpportunityTimeline.ProposalSubmitDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.ProposalSubmitDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>RFP Received Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.RFPReceivedDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.RFPReceivedDt == null ? "" : Model.OpportunityTimeline.RFPReceivedDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.RFPReceivedDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Expected Contract Signing Date(MMS)</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.ExpectedContractSignDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.ExpectedContractSignDt == null ? "" : Model.OpportunityTimeline.ExpectedContractSignDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.ExpectedContractSignDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Solution Workshop Start Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.WorkshopStartDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.WorkshopStartDt == null ? "" : Model.OpportunityTimeline.WorkshopStartDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.WorkshopStartDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Actual Contract Sign Date(MMS)</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.ActualContractSignDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.ActualContractSignDt == null ? "" : Model.OpportunityTimeline.ActualContractSignDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.ActualContractSignDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Stage 2 Submit Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.Stage2SubmitDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.Stage2SubmitDt == null ? "" : Model.OpportunityTimeline.Stage2SubmitDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.Stage2SubmitDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Contract Start Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.ContractStartDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.ContractStartDt == null ? "" : Model.OpportunityTimeline.ContractStartDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.ContractStartDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>RFP Down Select Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.RFPDownSelectDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.RFPDownSelectDt == null ? "" : Model.OpportunityTimeline.RFPDownSelectDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.RFPDownSelectDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Contract End Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.ContractEndDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.ContractEndDt == null ? "" : Model.OpportunityTimeline.ContractEndDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.ContractEndDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Presentations Orals Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.OralsDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.OralsDt == null ? "" : Model.OpportunityTimeline.OralsDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.OralsDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Initial Go-live Date</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.InitialGoLiveDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.OpportunityTimeline.InitialGoLiveDt == null ? "" : Model.OpportunityTimeline.InitialGoLiveDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="OpportunityTimeline.InitialGoLiveDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Contract Term</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.ContractTermNbr, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="OpportunityTimeline.ContractTermNbr"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Last Modified By</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.lastmodifiedby, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="OpportunityTimeline.lastmodifiedby"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Solution Innovation ECSD Quarter</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.SolECSDQrtr, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="OpportunityTimeline.SolECSDQrtr"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Solution Innovation ECSD Comments</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityTimeline.SolECSDComments, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="OpportunityTimeline.SolECSDComments"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _DueDiligence -->
+<h2 class="title">Due Diligence</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Due Diligence Required</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.DueDiligenceRequired, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="dueDiligence.DueDiligenceRequired"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Reason Due Diligence Out of Scope</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.ReasonDueDiligenceOutofScope, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="dueDiligence.ReasonDueDiligenceOutofScope"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Other DD OOS Description</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.OtherDDOOSDescription, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="dueDiligence.OtherDDOOSDescription"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Key Solution Point to Validate During DD</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.KeySolutionPointtoValidateDuringDD, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="dueDiligence.KeySolutionPointtoValidateDuringDD"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Due Diligence Status</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.DueDiligenceStatus, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="dueDiligence.DueDiligenceStatus"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Due Diligence start Date</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.DueDiligencestartDate, new
+                               {
+                                   @class = "form-control",
+                                   @readonly = "readonly",
+                                   @Value = (Model.dueDiligence.DueDiligencestartDate == null ? "" : Model.dueDiligence.DueDiligencestartDate.Value.ToShortDateString())
+                               }) -->
+                               <input
+                               type="text"
+                               class="form-control"
+                               [(ngModel)]="dueDiligence.DueDiligencestartDate"
+                               readonly="true"
+                             />
+                              </div>
+        <div class="form-group deal-setup">
+            <label>Due Diligence End Date</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.DueDiligenceEndDate, new
+                               {
+                                   @class = "form-control",
+                                   @readonly = "readonly",
+                                   @Value = (Model.dueDiligence.DueDiligenceEndDate == null ? "" : Model.dueDiligence.DueDiligenceEndDate.Value.ToShortDateString())
+                               }) -->
+                               <input
+                               type="text"
+                               class="form-control"
+                               [(ngModel)]="dueDiligence.DueDiligenceEndDate"
+                               readonly="true"
+                             />
+                              </div>
+        <div class="form-group deal-setup">
+            <label>Due Diligence Remarks</label>
+            <!-- @Html.TextBoxFor(model => model.dueDiligence.DueDiligenceRemarks, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="dueDiligence.DueDiligenceRemarks"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _ClientBackground -->
+<h2 class="title">Client Background</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Client Overview</label>
+            <!-- @Html.TextBoxFor(model => model.ClientBackground.ClientOverViewDesc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ClientBackground.ClientOverViewDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Business Problem</label>
+            <!-- @Html.TextBoxFor(model => model.ClientBackground.BusinessProblemDesc_, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ClientBackground.BusinessProblemDesc_"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Business Objective</label>
+            <!-- @Html.TextBoxFor(model => model.ClientBackground.BusinessObjectiveDesc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ClientBackground.BusinessObjectiveDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Link to client website</label>
+            <!-- @Html.TextBoxFor(model => model.ClientBackground.ClientWebsiteUrl, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ClientBackground.ClientWebsiteUrl"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Existing BPO Client</label>
+            <!-- @Html.TextBoxFor(model => model.ClientBackground.ExisitingBPOClientNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ClientBackground.ExisitingBPOClientNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Existing Accenture Client</label>
+            <!-- @Html.TextBoxFor(model => model.ClientBackground.ExisitingAccentureClientNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ClientBackground.ExisitingAccentureClientNm"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _ThirdPartyInvolvement -->
+<h2 class="title">Third Party Involvement</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Third Party Advisor</label>
+            <!-- @Html.TextBoxFor(model => model.ThirdPartyInvolvement.ThirdPartyAdvisorNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ThirdPartyInvolvement.ThirdPartyAdvisorNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Third Party Advisors – Comments</label>
+            <!-- @Html.TextAreaFor(model => model.ThirdPartyInvolvement.ThirdPartyAdvisorCommentDesc, new { style = "height:70px;", @class = "form-control", @readonly = "readonly", @maxlength = "2000" }) -->
+            <input
+            type="text"
+            style = "height:70px;"
+            class="form-control"
+            [(ngModel)]="ThirdPartyInvolvement.ThirdPartyAdvisorCommentDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Third Party Vendors in scope</label>
+            <!-- @Html.TextBoxFor(model => model.ThirdPartyInvolvement.ThirdPartyVendorsInScopeInd, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="ThirdPartyInvolvement.ThirdPartyVendorsInScopeInd"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _TechAttributes -->
+<h2 class="title">Tech Attributes</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Tech Solution On Hold?</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.TechSolutionHoldInd, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.TechSolutionHoldInd"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Deal Level</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.DealLevelDesc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.DealLevelDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>In scope Factories</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.FactoriesInscopeDesc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.FactoriesInscopeDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>In scope tools</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.InscopeTools, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.FactoriesInscopeDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Assigned BPO tech Arch</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.AssignedBPOTechArchNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.AssignedBPOTechArchNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Target sign(close)date</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.TargetSignDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.TechAttributes.TargetSignDt == null ? "" : Model.TechAttributes.TargetSignDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="TechAttributes.TargetSignDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>Total Tech Costs</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.TotalTechCostAmt, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.TotalTechCostAmt"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Target TGP for BPO approval Date</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.TargetBPOApprovalDt, new
+               {
+                   @class = "form-control",
+                   @readonly = "readonly",
+                   @Value = (Model.TechAttributes.TargetBPOApprovalDt == null ? "" : Model.TechAttributes.TargetBPOApprovalDt.Value.ToShortDateString())
+               }) -->
+               <input
+               type="text"
+               class="form-control"
+               [(ngModel)]="TechAttributes.TargetBPOApprovalDt"
+               readonly="true"
+             />
+              </div>
+        <div class="form-group deal-setup">
+            <label>% Tech Costs to Total Opportunity Costs</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.TechCostTCVPct, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.TechCostTCVPct"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>No TSDM</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.NoTSDM, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.NoTSDM"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>TSDM Region</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.TSDMRegionNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.TSDMRegionNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Inactive Reason</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.InactiveReasonDesc, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.InactiveReasonDesc"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Additional approved budget(effort & DNP)</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.AdditionalBudgetAmt, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.AdditionalBudgetAmt"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Inactive Month</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.InactiveMonthNm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.InactiveMonthNm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Allocation Estimate(In Hrs)</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.AllocationEstimateNbr, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.AllocationEstimateNbr"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>In Scope Additional Tools</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.InScopeAddTools, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.InScopeAddTools"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Total Opportunity Costs(w/o Contingency)</label>
+            <!-- @Html.TextBoxFor(model => model.TechAttributes.TotOppCostswoContingency, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="TechAttributes.TotOppCostswoContingency"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+<!-- _OpportunityBPODocumentDetails -->
+<h2 class="title">Opportunity BPO Document Details</h2>
+<div class="row">
+    <div class="deal-information-wrapper-opportunity">
+        <div class="form-group deal-setup">
+            <label>Link to Additional Documents</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityBPODocumentDetails.AdditionalDocumentUrl, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="OpportunityBPODocumentDetails.AdditionalDocumentUrl"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>SharePoint Folder Name</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityBPODocumentDetails.SPfoldernm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="OpportunityBPODocumentDetails.SPfoldernm"
+            readonly="true"
+          />
+          </div>
+        <div class="form-group deal-setup">
+            <label>Alt SharePoint Folder Name</label>
+            <!-- @Html.TextBoxFor(model => model.OpportunityBPODocumentDetails.AltSPfoldernm, new { @class = "form-control", @readonly = "readonly" }) -->
+            <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="OpportunityBPODocumentDetails.AltSPfoldernm"
+            readonly="true"
+          />
+          </div>
+    </div>
+</div>
+
+
+

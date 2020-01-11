@@ -1,0 +1,150 @@
+<!--<p>user-metrics works!</p>@*@{
+        Layout = "~/Areas/MobilizationSolution/Views/Shared/_Layout.cshtml"; 
+    }*@
+
+@*Defect: Cross-Site Request Forgery vulnerability
+    Author: Raju
+    Resolved Date: Sep/13/2017*@
+
+@using (Html.BeginForm("SavePersonProfile", "UserMetricsController", FormMethod.Post, new { id = "__AjaxAntiForgeryForm" }))
+{
+    @Html.AntiForgeryToken()
+
+}
+
+@{
+
+    Layout = "~/Areas/DMAT/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Areas/Dashboard/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "UserManagement";
+
+}
+
+
+
+@*-->
+
+<!--@if (ViewBag.IsSysAdmin != null)
+{-->
+
+<div class="deal-info" ng-controller="userMetricsController">
+    <div class="container-fluid internal-page-title">
+
+        <h1 style="padding-top: 70px;">User Management</h1>
+    </div>
+    <input id="isSysAdmin" type="hidden" value="@ViewBag.IsSysAdmin.ToString()" />
+    <div class="container-fluid internal-page-content" style="margin-left:11%;">
+        <div class="deal-information-wrapper">
+            <div class="form-group deal-setup">
+                <label for="">
+                    Select User Name
+                </label>
+                <input type="text" class="form-control" id="userId" maxlength="50" ng-model="userId" placeholder="Select User Name">
+               
+            </div>
+            <div class="form-group deal-setup" style="margin-left:160px;">
+                <label for="">
+                    Select User Profile
+                </label>
+                <!--@if (ViewBag.IsSysAdmin)
+                {
+                <select id="profile" kendo-drop-down-list k-options="profileOptionsAdmin" k-change="changeDropDown"></select>
+                }
+                else
+                {
+
+                <select id="profile" kendo-drop-down-list k-options="profileOptions" k-change="changeDropDown"></select>
+                }-->
+            </div>
+            <div class="form-group deal-setup" style="margin-right:74%">
+                <label for="">
+                    SelectUserServiceGroup
+                </label>
+                <select id="servicegrp" kendo-drop-down-list k-options="servicegrpOptions"></select>
+            </div>
+            <div class="form-group deal-setup">
+                <!--@if (ViewBag.IsSysAdmin)
+                {-->
+                <div id="admincheck" class="col-sm-6 form-group" style="margin-left:197.4%; display:block;margin-top:-23px;">
+                    <div class="checkbox col-xs-12 form-group">
+                        <input name="mobBox" type="checkbox" id="checkbox2">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox2">System Admin</label>
+                    </div>
+                    <div class="checkbox col-xs-12 form-group">
+                        <input name="mobBox" type="checkbox" id="checkbox3">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox3">TransIT Admin</label>
+                    </div>
+                </div>
+                <div id="createdeal" class="col-sm-6 form-group" style="margin-left:186%; display:none; margin-top:3%;">
+                    <div class="checkbox col-xs-12 form-group" style="margin-left:38px;margin-top:-60px;">
+                        <input name="mobBox" type="checkbox" id="checkbox4">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox4">Create Deal</label>
+                    </div>
+                </div>
+                <div id="userview" class="col-sm-6 form-group" style="margin-left:197.4%; display:none;margin-top:-23px;">
+                    <div class="checkbox col-xs-12 form-group">
+                        <input name="viewbox" type="checkbox" id="checkbox5">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox5">View All Access</label>
+                    </div>
+                    <div class="checkbox col-xs-13 form-group">
+                        <input name="viewbox" type="checkbox" id="checkbox6">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox6">Edit Deal Access</label>
+                    </div>
+                </div>
+                <!--}
+                else
+                {-->
+                <div id="admincheck" class="col-sm-6 form-group" style="margin-left:197.4%; display:block;margin-top:-23px;">
+                    <div class="checkbox col-xs-12 form-group">
+                        <input name="mobBox" type="checkbox" id="checkbox2">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox2">System Admin</label>
+                    </div>
+                    <div class="checkbox col-xs-12 form-group">
+                        <input name="mobBox" type="checkbox" id="checkbox3">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox3">TransIT Admin</label>
+                    </div>
+                </div>
+
+                <div id="createdeal" class="col-sm-6 form-group" style="margin-left:186%; display:none; margin-top:3%;">
+                    <div class="checkbox col-xs-12 form-group">
+                        <input name="mobBox" type="checkbox" id="checkbox4">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox4">Create Deal</label>
+                    </div>
+                </div>
+                <div id="userview" class="col-sm-6 form-group" style="margin-left:197.4%; display:none;margin-top:-23px;">
+                    <div class="checkbox col-xs-12 form-group">
+                        <input name="viewbox" type="checkbox" id="checkbox5">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox5">View All Access</label>
+                    </div>
+                    <div class="checkbox col-xs-13 form-group">
+                        <input name="viewbox" type="checkbox" id="checkbox6">
+                        <span class="css-checkLabel"></span>
+                        <label for="checkbox6">Edit Deal Access</label>
+                    </div>
+                </div>
+                <!--}-->
+            </div>
+            <div class="action-btn-footer" style="margin-left:61%;margin-top:-3%">
+                <button class="btn-primary" type="button" ng-click="SaveTask()">Save</button>
+                <button class="btn-primary" type="button" ng-click="UserInsertExcel()">Download Template</button>
+                <button class="btn-primary" type="button" ng-click="FileUploadUserInsert()">Import</button>
+
+            </div>
+            <div class="pull-right" style="margin-top:1%">* For bulk upload of users please insert only 200 records at a time.</div>
+        </div>
+    </div>
+
+</div>
+<!--}-->
+
+<!--<script src="~/Scripts/UserMetrics/UserMetrics.js?v=@Session[" Version"]"></script>-->
+

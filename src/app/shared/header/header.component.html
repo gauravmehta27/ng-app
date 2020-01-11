@@ -1,0 +1,53 @@
+  <!-- Nav bar based on affinity design guidline -->
+  <nav class="navbar navbar-inverse navbar-toggleable-sm navbar-fixed-top">
+    <button class="navbar-toggler navbar-toggler-right m-0 r-0" type="button" data-toggle="collapse" data-target="#navbarNavPrimary"
+      aria-controls="navbarNavPrimary" aria-expanded="false" aria-label="Toggle navigation">
+      <elicon type="md-icon" name="menu"></elicon>
+    </button>
+    
+    <span class="navbar-brand"><span class="light-text">Trans</span>IT</span>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+    <ul class="navbar-nav navbar-tabs text-center float-right hidden-sm-down navbar-right">
+      <li>
+        <a href="#/" aria-label="Create Project" title="Create Project">
+            <i class="transIcon-create_project"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#/" aria-label="User Management" title="User Management">
+            <i class="transIcon-user_management"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#/" aria-label="Deal Report" title="Deal Report">
+            <i class="dlrpt" ></i>
+        </a>
+      </li>      
+    </ul>
+  </nav>
+  <div class="navbar-toggleable-sm">
+    <div class="collapse navbar-collapse" id="navbarNavPrimary">
+      <nav class="nav nav-tabs primary-tabs d-block d-md-flex w-100">
+        <li class="nav-item">
+          <a id="home" class="nav-link" routerLink="/home" (click)='updateClass($event)'>Home</a>
+        </li>
+        <li class="nav-item">
+          <a id="dash" class="nav-link" routerLink="/dashboard" (click)='updateClass($event)'>Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a id="admin" class="nav-link" routerLink="/admin" (click)='updateClass($event)'>Admin</a>
+        </li>
+        <li class="nav-item">
+          <a id="plan" class="nav-link" routerLink="/plan" (click)='updateClass($event)'>Plan</a>
+        </li>
+        <li class="nav-item">
+          <a id="dmat" class="nav-link" routerLink="/dmat" (click)='updateClass($event)'>DMAT Home</a>
+        </li>
+      </nav>
+    </div>
+  
+  </div>
